@@ -1,0 +1,11 @@
+<h1>Which area do you need help within?</h1>
+
+<select>
+  <% @product_areas.each do |productarea| %>
+  <option value="IT"><%=productarea%>
+</option>
+
+  <%end%>
+</select>
+
+<%= link_to "page1", page1_path %>

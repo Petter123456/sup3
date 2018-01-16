@@ -1,0 +1,40 @@
+<h1>order_spec, suppliers, creaet form etc.</h1>
+
+
+<%= form_tag %>
+  Position:  <%= text_field(:q, :n)%> </br>
+  Start Date:  <%= date_field(:q, :n) %></br>
+  End Date:  <%= date_field(:q, :n) %></br>
+  City:  <%= text_field(:q, :n) %></br>
+
+  Position Percentage:
+  <select>
+    <% @position_percentage.each do |percentage| %>
+    <option value="Percentage"><%=percentage%></option>
+    <%end%>
+  </select></br>
+  Minimum level of Experiance:
+  <select>
+    <% @level_of_experiance.each do |experiance| %>
+    <option value="Experiance"><%=experiance%></option>
+    <%end%>
+  </select></br>
+
+  Salary:
+  <select>
+    <% @monthly_salary.each do |salary| %>
+    <option value="Salary"><%=salary%></option>
+    <%end%>
+  </select></br>
+
+  <%= submit_tag 'See Suppliers' %>
+
+
+
+<br></br>
+
+
+<% @supplier.each do |supplier| %>
+  <%= supplier.company%> - <%= %></br>
+  <%= supplier.prices.map {|p| p.it} %>
+<% end %>

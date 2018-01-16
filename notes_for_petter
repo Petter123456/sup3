@@ -1,0 +1,16 @@
+sista steget: skapade table för priser la till product areas samt att det tillhör suppliers(belongs_to/has_many). Hur lägger du in faktorn???
+
+terminal sista:
+
+irb(main):001:0> Price.all
+  Price Load (3.1ms)  SELECT  "prices".* FROM "prices" LIMIT ?  [["LIMIT", 11]]
+=> #<ActiveRecord::Relation []>
+irb(main):002:0> Price.all.errors.messages
+NoMethodError:   Price Load (0.3ms)  SELECT  "prices".* FROM "prices" LIMIT ?  [["LIMIT", 11]]
+undefined method `errors' for #<ActiveRecord::Relation []>
+	from (irb):2
+irb(main):003:0> Price.new
+=> #<Price id: nil, it: nil, finance: nil, call_center: nil, logisticts: nil, marketing: nil, technology: nil, created_at: nil, updated_at: nil>
+irb(main):004:0> Price.new.errors.messages
+=> {}
+irb(main):005:0>

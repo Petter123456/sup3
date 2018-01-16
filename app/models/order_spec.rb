@@ -1,0 +1,2 @@
+class OrderSpec < ApplicationRecord
+end
