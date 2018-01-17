@@ -1,24 +1,24 @@
 
 <%= form_tag %>
-  Position: <%= text_field_tag "position"%></br>
-  Start Date:  <%= date_field_tag "start_date"%></br>
-  End Date:  <%= date_field_tag "end_date"%></br>
-  City:  <%= text_field_tag "city"%></br>
+  x: <%= text_field_tag "position"%></br>
+   x:  <%= date_field_tag "start_date"%></br>
+  x:  <%= date_field_tag "end_date"%></br>
+  x:  <%= text_field_tag "city"%></br>
 
-  Position Percentage:
+   x:
   <select>
     <% @position_percentage.each do |percentage| %>
     <option name="percentage" value="Percentage"><%=percentage%></option>
     <%end%>
   </select></br>
-  Minimum level of Experiance:
+x:
   <select>
     <% @level_of_experiance.each do |experiance| %>
     <option name="experiance" value="Experiance"><%=experiance%></option>
     <%end%>
   </select></br>
 
-  Salary:
+  x:
   <select>
     <% @monthly_salary.each do |salary| %>
     <option name="salary" value="Salary"><%=salary%></option>
@@ -33,7 +33,7 @@
 
 
 <% @supplier.each do |supplier| %>
-  <%= supplier.company%> -
+  <!-- <%= supplier.company%> - -->
   <%= supplier.prices.map {|p| p.it.to_f} %>
   <%= submit_tag 'choose supplier'%>
 </br>
