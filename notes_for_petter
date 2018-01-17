@@ -1,16 +1,5 @@
-sista steget: skapade table för priser la till product areas samt att det tillhör suppliers(belongs_to/has_many). Hur lägger du in faktorn???
+1. Sätt krav till start_date & end_date && att alla fält måste ha value innan suppliers visas
 
-terminal sista:
+2. när de väljer supplier skall en form upp --> här skall de helst kunna fylla i alla uppgifter och sedan kunna logga in eller signa up.
 
-irb(main):001:0> Price.all
-  Price Load (3.1ms)  SELECT  "prices".* FROM "prices" LIMIT ?  [["LIMIT", 11]]
-=> #<ActiveRecord::Relation []>
-irb(main):002:0> Price.all.errors.messages
-NoMethodError:   Price Load (0.3ms)  SELECT  "prices".* FROM "prices" LIMIT ?  [["LIMIT", 11]]
-undefined method `errors' for #<ActiveRecord::Relation []>
-	from (irb):2
-irb(main):003:0> Price.new
-=> #<Price id: nil, it: nil, finance: nil, call_center: nil, logisticts: nil, marketing: nil, technology: nil, created_at: nil, updated_at: nil>
-irb(main):004:0> Price.new.errors.messages
-=> {}
-irb(main):005:0>
+3. När de klickar på beställ ---> email till mig, kund, samt ett separat till leverantör med accept knapp som skickar tillbaka en bekräftelse till mig (gärna kund också).

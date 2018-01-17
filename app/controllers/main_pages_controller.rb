@@ -1,4 +1,7 @@
 class MainPagesController < ApplicationController
+  # before_action :authorize
+  before_action :set_song, only: [:show, :edit, :update, :destroy]
+
   def index
     @product_areas = ["IT", "Finance", "Marketing", "Call Center", "Technology",]
   end

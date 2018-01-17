@@ -1,29 +1,27 @@
-<h1>order_spec, suppliers, creaet form etc.</h1>
-
 
 <%= form_tag %>
-  Position:  <%= text_field(:q, :n)%> </br>
-  Start Date:  <%= date_field(:q, :n) %></br>
-  End Date:  <%= date_field(:q, :n) %></br>
-  City:  <%= text_field(:q, :n) %></br>
+  Position: <%= text_field_tag "position"%></br>
+  Start Date:  <%= date_field_tag "start_date"%></br>
+  End Date:  <%= date_field_tag "end_date"%></br>
+  City:  <%= text_field_tag "city"%></br>
 
   Position Percentage:
   <select>
     <% @position_percentage.each do |percentage| %>
-    <option value="Percentage"><%=percentage%></option>
+    <option name="percentage" value="Percentage"><%=percentage%></option>
     <%end%>
   </select></br>
   Minimum level of Experiance:
   <select>
     <% @level_of_experiance.each do |experiance| %>
-    <option value="Experiance"><%=experiance%></option>
+    <option name="experiance" value="Experiance"><%=experiance%></option>
     <%end%>
   </select></br>
 
   Salary:
   <select>
     <% @monthly_salary.each do |salary| %>
-    <option value="Salary"><%=salary%></option>
+    <option name="salary" value="Salary"><%=salary%></option>
     <%end%>
   </select></br>
 
@@ -35,6 +33,22 @@
 
 
 <% @supplier.each do |supplier| %>
-  <%= supplier.company%> - <%= %></br>
-  <%= supplier.prices.map {|p| p.it} %>
+  <%= supplier.company%> -
+  <%= supplier.prices.map {|p| p.it.to_f} %>
+  <%= submit_tag 'choose supplier'%>
+</br>
 <% end %>
+
+
+<br></br>
+<br></br>
+
+
+
+<div class="header">
+  <% if current_user %>
+  Welcome <%= current_user.name %> | <%= link_to "logout", '/logout' %>
+  <% else %>
+  <%= link_to "Login", '/login' %> | <%= link_to "Sign-up", '/signup' %>
+  <% end %>
+</div>
