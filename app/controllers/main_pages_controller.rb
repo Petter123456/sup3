@@ -7,10 +7,12 @@ class MainPagesController < ApplicationController
   end
 
   def page_1
+
+    @product_areas = ["IT", "Finance", "Marketing", "Call Center", "Technology",]
+
     @position_percentage = ["10%",'20 %','30 %','40 %', '50 %', '60 %', '70 %', '80 %', '90 %', '100 %']
 
     @level_of_experiance = ["Student","Just Graduated", "1 year", "2 Years", "3 years", "4 years", "5 years", "5 + years" ]
-
 
     @monthly_salary = []
     i = 20000

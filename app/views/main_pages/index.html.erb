@@ -1,11 +1,6 @@
-<h1>Which area do you need help within?</h1>
 
-<select>
-  <% @product_areas.each do |productarea| %>
-  <option value="IT"><%=productarea%>
-</option>
+  </select>
 
-  <%end%>
-</select>
-
-<%= link_to "page1", page1_path %>
+  <%= form_tag(page1_path, method: :get) do %>
+    <%= submit_tag 'Click here to get started', :class => "submit_prod_area"%>
+  <% end %>

@@ -1,5 +1,11 @@
-1. Sätt krav till start_date & end_date && att alla fält måste ha value innan suppliers visas
+1. start datum kan inte vara tidigare än idag
 
-2. när de väljer supplier skall en form upp --> här skall de helst kunna fylla i alla uppgifter och sedan kunna logga in eller signa up.
+2. lös kalkyl för erfarenhet * procent * lön
 
-3. När de klickar på beställ ---> email till mig, kund, samt ett separat till leverantör med accept knapp som skickar tillbaka en bekräftelse till mig (gärna kund också).
+3. supplier city måste vara samma som input, annars generera default medelande.
+
+4. när de väljer supplier skall en form upp --> här skall de helst kunna fylla i alla uppgifter och sedan kunna logga in eller signa up.
+
+5. När de klickar på beställ ---> email till mig, kund, samt ett separat till leverantör med accept knapp som skickar tillbaka en bekräftelse till mig (gärna kund också).
+
+6. Hur gör vi med consulthus? Egen databas? Eller egen view?

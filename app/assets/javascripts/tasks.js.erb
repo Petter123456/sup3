@@ -1,0 +1,55 @@
+
+
+const productarea =   $('.productarea').val()
+
+$(document).on('ready', function(){
+  $('.supplier').hide();
+  $('.header').hide();
+
+  $('.show').click(function(e){
+    e.preventDefault(); // preventss default behavior
+      if ($('.position').val().length < 5) {
+        alert("Please fill the positions field");
+      }
+      else if(Date.parse($('.start_date').val()) > Date.parse($('.end_date').val())){
+        alert("start datum kan inte förekomma efter slut datum");
+      }
+      else if($('.city').val().length < 3){
+        alert("Please enter a valid city");
+      }
+
+      else{
+      MinSalaryIt()
+    }
+  });
+});
+
+function MinSalaryIt() {
+    if ($('.productarea .opts').val() === "IT" && $('.experience').val() === "1 year" && Number($('.salary').val()) < 33000){
+        alert("The salary you have choosen for the given position is too low, please enter a realistic salary");
+    }
+    else if($('.percentage').val() !== "100 %"){
+        alert("The person you are looking for will not be interested anything other than a fulltime position please update the position percentage or lower the level of experance to Just Graduated")
+    }
+    else if ($('.productarea .opts').val() === "IT" && $('.experience').val() === "2 years" && Number($('.salary').val()) < 37000){
+        alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
+    }
+    else if ($('.productarea .opts').val() === "IT" && $('.experience').val() === "3 years" && Number($('.salary').val()) < 40000){
+        alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
+    }
+    else if ($('.productarea .opts').val() === "IT" && $('.experience').val() === "4 years" && Number($('.salary').val()) < 45000){
+        alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
+    }
+    else if ($('.productarea .opts').val() === "IT" && $('.experience').val() === "5 years" && Number($('.salary').val()) < 50000){
+        alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
+    }
+    else {
+      $('.supplier').show();
+      $('.header').show();
+    }
+  };
+
+
+
+
+//

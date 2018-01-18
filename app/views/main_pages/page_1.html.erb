@@ -1,31 +1,43 @@
+  Area of Assistance: <select class="productarea">
+    <% @product_areas.each do |productarea| %>
+    <option class="opts"> <%=productarea%>
+  </option>
+
+    <%end%>
+  </select>
+
+
+
+
 
 <%= form_tag %>
-  x: <%= text_field_tag "position"%></br>
-   x:  <%= date_field_tag "start_date"%></br>
-  x:  <%= date_field_tag "end_date"%></br>
-  x:  <%= text_field_tag "city"%></br>
+  Position: <%= text_field_tag :position, params[:position], :placeholder => 'Enter position title', class: 'position'%>
+</br>
+  Start Date:  <%= date_field_tag :start_date, params[:start_date], class: 'start_date'%></br>
+  End Date:  <%= date_field_tag :end_date, params[:end_date], class: 'end_date'%></br>
+  City:  <%= text_field_tag :city, params[:city], :placeholder => 'Enter city', class: 'city'%></br>
 
-   x:
-  <select>
+  Position Percentage:
+  <select class="percentage">
     <% @position_percentage.each do |percentage| %>
-    <option name="percentage" value="Percentage"><%=percentage%></option>
+    <option><%=percentage %></option>
     <%end%>
   </select></br>
-x:
-  <select>
+  Minimum level of Experiance:
+  <select class="experience">
     <% @level_of_experiance.each do |experiance| %>
-    <option name="experiance" value="Experiance"><%=experiance%></option>
+    <option ><%=experiance%></option>
     <%end%>
   </select></br>
 
-  x:
-  <select>
+  Salary:
+  <select class="salary">
     <% @monthly_salary.each do |salary| %>
-    <option name="salary" value="Salary"><%=salary%></option>
+    <option><%=salary.to_i%></option>
     <%end%>
   </select></br>
 
-  <%= submit_tag 'See Suppliers' %>
+  <button class="show">See Suppliers</button>
 
 
 
@@ -33,9 +45,9 @@ x:
 
 
 <% @supplier.each do |supplier| %>
-  <!-- <%= supplier.company%> - -->
-  <%= supplier.prices.map {|p| p.it.to_f} %>
-  <%= submit_tag 'choose supplier'%>
+  <p class="supplier"><%= supplier.company %> -
+<%= supplier.prices.map {|p| p.it.to_f}  %>
+<%= submit_tag 'choose supplier', class: 'show'%></p>
 </br>
 <% end %>
 
