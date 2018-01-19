@@ -1,18 +1,14 @@
-  Area of Assistance: <select class="productarea">
-    <% @product_areas.each do |productarea| %>
+Area of Assistance:
+  <select class="productarea">
+      <% @product_areas.each do |productarea| %>
     <option class="opts"> <%=productarea%>
-  </option>
-
-    <%end%>
+    </option>
+      <%end%>
   </select>
-
-
-
-
 
 <%= form_tag %>
   Position: <%= text_field_tag :position, params[:position], :placeholder => 'Enter position title', class: 'position'%>
-</br>
+  </br>
   Start Date:  <%= date_field_tag :start_date, params[:start_date], class: 'start_date'%></br>
   End Date:  <%= date_field_tag :end_date, params[:end_date], class: 'end_date'%></br>
   City:  <%= text_field_tag :city, params[:city], :placeholder => 'Enter city', class: 'city'%></br>
@@ -20,50 +16,46 @@
   Position Percentage:
   <select class="percentage">
     <% @position_percentage.each do |percentage| %>
-    <option><%=percentage %></option>
+      <option><%=percentage %></option>
     <%end%>
   </select></br>
+
   Minimum level of Experiance:
   <select class="experience">
     <% @level_of_experiance.each do |experiance| %>
-    <option ><%=experiance%></option>
+      <option ><%=experiance%></option>
     <%end%>
   </select></br>
 
   Salary:
   <select class="salary">
     <% @monthly_salary.each do |salary| %>
-    <option><%=salary.to_i%></option>
+      <option><%=salary.to_i%></option>
     <%end%>
   </select></br>
 
-  <button class="show">See Suppliers</button>
-
-
+<button class="show">See Suppliers</button>
 
 <br></br>
-<% @supplier.each do |supplier| %>
-  <p class="supplier_city"><%= supplier.city %></p>
-<% end %>
-
-
-
-
-<% @supplier.each do |supplier| %>
-  <p class="supplier"><%= supplier.company %> -
-<%= supplier.prices.map {|p| p.it.to_f}  %>
-<%= submit_tag 'choose supplier', class: 'show'%></p>
+  <% @supplier.each do |supplier| %>
+    <p class="supplier"><%= supplier.company %> -
+      <%= supplier.prices.map {|p| p.it.to_f}  %>
+      <%= submit_tag 'choose supplier', class: 'show'%>
+    </p>
 </br>
 <% end %>
 
 <br></br>
-<br></br>
-
 
 <div class="header">
   <% if current_user %>
-  Welcome <%= current_user.name %> | <%= link_to "logout", '/logout' %>
+    Welcome <%= current_user.name %> | <%= link_to "logout", '/logout' %>
   <% else %>
-  <%= link_to "Login", '/login' %> | <%= link_to "Sign-up", '/signup' %>
+    <%= link_to "Login", '/login' %> | <%= link_to "Sign-up", '/signup' %>
   <% end %>
 </div>
+
+
+<% @supplier.each do |supplier| %>
+  <p class="supplier_city"><%= supplier.city %></p>
+<% end %>
