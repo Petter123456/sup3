@@ -26,8 +26,10 @@ class MainPagesController < ApplicationController
     @supplier_first = @supplier.first
     # @it = @supplier_first.prices.map {|p| p.it}
     # @prices = Price.all.map{|p| p.it}
-
     # @it = @prices.map {|p| p.map {|i| i.it}}.flatten
+
+
+
 
 
 end

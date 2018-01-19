@@ -1,8 +1,5 @@
-1. start datum kan inte vara tidigare än idag
 
-2. lös kalkyl för erfarenhet * procent * lön
-
-3. supplier city måste vara samma som input, annars generera default medelande.
+3. supplier city måste vara samma som input, annars generera default medelande. --- forsätt i main controller på @city
 
 4. när de väljer supplier skall en form upp --> här skall de helst kunna fylla i alla uppgifter och sedan kunna logga in eller signa up.
 

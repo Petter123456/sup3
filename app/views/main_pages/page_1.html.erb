@@ -42,6 +42,11 @@
 
 
 <br></br>
+<% @supplier.each do |supplier| %>
+  <p class="supplier_city"><%= supplier.city %></p>
+<% end %>
+
+
 
 
 <% @supplier.each do |supplier| %>
@@ -51,10 +56,8 @@
 </br>
 <% end %>
 
-
 <br></br>
 <br></br>
-
 
 
 <div class="header">
