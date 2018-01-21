@@ -3,44 +3,42 @@
 const productarea =   $('.productarea').val()
 
 $(document).on('ready', function(){
-  $('.supplier').hide();
-  $('.header').hide();
-
+  // $('.supplier').hide();;
+  // $('.header').hide();
   $('.show').click(function(e){
-    e.preventDefault(); // preventss default behavior
-    if ($('.position').val().length < 5) {
-      alert("Please fill the positions field");
+    var isValid = true;
+    // e.preventDefault(); // preventss default behavior
+    if ($('.salary').val().length < 5) {
+      alert("Salary too low, please fill in realistic salary");
+      isValid = false
     }
     else if(Date.parse($('.start_date').val()) > Date.parse($('.end_date').val())){
       alert("start datum kan inte förekomma efter slut datum");
+      isValid = false
     }
     else if(Date.parse($('.start_date').val()) < Date.now()){
       alert("start datum måste förekomma efter dagens datum");
-    }
-    else if($('.start_date').val().length < 10){
-      alert("Vänligen fyll i datum");
-    }
-    else if($('.end_date').val().length < 10){
-      alert("Vänligen fyll i datum");
-    }
-    else if($('.city').val().length < 3){
-      alert("Please enter a valid city");
+      isValid = false
     }
     else if (experianceVsPositionPercentage() === true ){
-      return false
+      // return false
+      isValid = false
     }
     else if (MinSalaryIt() === true ){
-      return false
+      // return false
+      isValid = false
     }
     else if (MinSalaryFinance() === true ){
-      return false
-    }
-    else if (right_supplier() === true ){
-      return false
+      // return false
+      isValid = false
     }
     else {
-      $('.supplier').show();
+      $('.supplier').show();;
       $('.header').show();
+      isValid = true
+    };
+    if (!isValid) {
+      e.preventDefault();
     }
   });
 });
@@ -68,7 +66,6 @@ function MinSalaryIt() {
     else if ($('.productarea .opts').val() === "IT" && $('.experience').val() === "5 years" && Number($('.salary').val()) < 50000){
         alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
         return true
-
     }
   };
 
@@ -107,15 +104,3 @@ function MinSalaryIt() {
 
 
 //
-
-
-function right_supplier(){
-
-if ($('.city').val() === $('.supplier_city').val()) { // PROBLEM - SUPPLIER_CITY NOT ITERATING THROUGH ALL SUPPLIERS AS IN VIEW
-  console.log("awesome")
-} else{
-  console.log("damit")
-
-}
-
-}

@@ -1,7 +1,5 @@
 
-2. .show fungerar inte efter sista functionerna?????
-
-3. supplier city måste vara samma som input, annars generera default medelande. --- forsätt i main controller på @city
+3. Det skall inte vara någon decimal på pris. 
 
 4. när de väljer supplier skall en form upp --> här skall de helst kunna fylla i alla uppgifter och sedan kunna logga in eller signa up.
 
