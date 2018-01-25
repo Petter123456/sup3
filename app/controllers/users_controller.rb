@@ -4,14 +4,18 @@ class UsersController < ApplicationController
   end
 
   def create
-  user = User.new(user_params)
-  if user.save
-    session[:user_id] = user.id
-    redirect_to root_path # '/' something is also possible depending oon where you wanna send them.
-  else
-    redirect_to '/signup'
+    @user = User.new(user_params)
+    if @user.save
+      session[:user_id] = @user.id
+
+     ExampleMailer.sample_email(@user).deliver_now
+
+     redirect_to root_path # '/' something is also possible depending oon where you wanna send them.
+
+    else
+      redirect_to '/signup'
+    end
   end
-end
 
   private
 

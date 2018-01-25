@@ -1,7 +1,18 @@
 
-3. Det skall inte vara någon decimal på pris. 
+1. Det skall inte vara någon decimal på pris.
 
-4. när de väljer supplier skall en form upp --> här skall de helst kunna fylla i alla uppgifter och sedan kunna logga in eller signa up.
+2.tasks.js:
+  2.1 ROW 56 -------> $('.link_to_signup_form').click(function(){ //PROBLEM WHEN GENERATED SHOULD APPEAR INFRONT OF LOGIN_FORM & WHEN FILLED AND SUBMITTED SHOW ORDER_BUTTON
+    $('.signup_form').show();
+    return false;
+  });
+
+  2.2. ROW 61 ------->   $('.login_button').click(function(){
+      //PROBLEM IF LOGGED IN OK THEN SHOW:
+      $('.order_button').show();
+      return false;
+    });
+
 
 5. När de klickar på beställ ---> email till mig, kund, samt ett separat till leverantör med accept knapp som skickar tillbaka en bekräftelse till mig (gärna kund också).
 

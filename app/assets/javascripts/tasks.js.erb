@@ -5,6 +5,11 @@ const productarea =   $('.productarea').val()
 $(document).on('ready', function(){
   // $('.supplier').hide();;
   // $('.header').hide();
+  $('.login_form').hide();
+  $('.signup_form').hide();
+  $('.order_button').hide ();
+
+
   $('.show').click(function(e){
     var isValid = true;
     // e.preventDefault(); // preventss default behavior
@@ -39,7 +44,24 @@ $(document).on('ready', function(){
     };
     if (!isValid) {
       e.preventDefault();
-    }
+    };
+  });
+
+
+  $('.välj_leverator').click(function(){
+    $('.login_form').show();
+    return false;
+  });
+
+  $('.link_to_signup_form').click(function(){ //PROBLEM WHEN GENERATED SHOULD APPEAR INFRONT OF LOGIN_FORM & WHEN FILLED AND SUBMITTED SHOW ORDER_BUTTON
+    $('.signup_form').show();
+    return false;
+  });
+
+  $('.login_button').click(function(){
+    //PROBLEM IF LOGGED IN OK THEN SHOW:
+    $('.order_button').show();
+    return false;
   });
 });
 

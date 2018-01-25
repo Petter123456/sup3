@@ -41,19 +41,42 @@
   <% if @assitance == "it" %>
     <p class="supplier">
       <%= supplier.prices.map {|p| p.it.to_f * @salary_divided_by_hours.floor } %> -
-      <%= submit_tag 'välj leverantör'%>
+      <%= submit_tag 'välj leverantör', class: 'välj_leverator'%>
     </p>
   <% elsif @assitance == "marketing" %>
-      <p class="supplier"><%= supplier.prices.map {|p| p.marketing.to_f}  %></p>
+      <p class="supplier"><%= supplier.prices.map {|p| p.marketing.to_f} %>
+      <%= submit_tag 'välj leverantör', class: 'välj_leverator'%>
+      </p>
       <!-- #elseif   #@assitance == -->
   <%end%>
   <%end%>
 <%end%>
-<!-- Login/logout -->
-<div class="header">
-  <% if current_user %>
-    Welcome <%= current_user.name %> | <%= link_to "logout", '/logout' %>
-  <% else %>
-    <%= link_to "Login", '/login' %> | <%= link_to "Sign-up", '/signup' %>
-  <% end %>
+
+
+<div class="wrapper_login_form">
+  <div class="login_form">
+    <p>Please sign in to complete order </p>
+    <%= form_tag '/login' do %>
+      <h1>Log In</h1>
+      Email: <%= text_field_tag :email %><br><br>
+      Password: <%= password_field_tag :password %><br><br>
+      <%= submit_tag "Login", :class => 'login_button' %>
+      <p>If your not registered, please <%= link_to "Sign-up", '/signup', class: 'link_to_signup_form' %> to continue</p>
+    <% end %>
+  </div>
 </div>
+
+<div class="wrapper_signup_form">
+  <div class="signup_form">
+      <%= form_for :user do |form| %>
+      <p>Please fill in the fields below: </p>
+      Name: <%= form.text_field :name %><br><br>
+      Email: <%= form.text_field :email %><br><br>
+      Password: <%= form.password_field :password %><br><br>
+      Password Confirmation: <%= form.password_field :password_confirmation %><br><br>
+      <%= form.submit "Sign Up"%>
+      <% end %>
+  </div>
+</div>
+
+<button type="button" name="button" class="order_button">Confirm Order</button>

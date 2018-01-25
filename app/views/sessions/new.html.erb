@@ -1,7 +1,7 @@
 <h1>Log In</h1>
 
 <%= form_tag '/login' do %>
-Email: <%= text_field_tag :email %>
+Email: <%= text_field_tag :email, params[:email], :placeholder => 'Enter email', class: 'email_login', :required => true %>
 Password: <%= password_field_tag :password %>
 <%= submit_tag "Login" %>
 <% end %>
