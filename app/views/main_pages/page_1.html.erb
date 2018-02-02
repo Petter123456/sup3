@@ -71,15 +71,15 @@
       </div>
       <div class="modal-body">
         <!-- Gets input from cookie -->
-        <input type="text" name="bookId" id="bookId" value=""/>
-      <% form_tag '/future_action' method:'post'%>
-
+        <%= form_tag '/confirm_order_and_email', method: :post do%>
+          <input type="text" name="confirm_position" id="confirm_position" value=""/>
+<%= submit_tag 'Confirm Order', class:"btn btn-primary"%>
 //Continue Here!!!
-
+        <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <%= submit_tag 'Confirm Order', class:"btn btn-primary"%>
+
       </div>
     </div>
   </div>

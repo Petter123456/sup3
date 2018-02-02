@@ -5,7 +5,6 @@ class MainPagesController < ApplicationController
     end
 
   def page_1
-
     # Product Areas
     @product_areas = ["IT", "Finance", "Marketing", "Call Center", "Technology",]
     # Position Percentages
@@ -32,7 +31,10 @@ class MainPagesController < ApplicationController
     @salary_divided_by_hours = params[:salary].to_f / 162.5
 end
 
-
+  def confirm_order_and_email
+    @user = User.find(session[:user_id])
+    ConfirmationMailer.confirmation_email(@user).deliver_now
+  end
 
   def create
   end
@@ -47,7 +49,7 @@ end
   end
 
   def main_params
-    params.require(:main_pages).permit(:city)
+    params.require(:main_pages).permit(:city, :name, :email)
   end
 
 end
