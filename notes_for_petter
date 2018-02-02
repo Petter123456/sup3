@@ -14,6 +14,6 @@
     });
 
 
-5. När de klickar på beställ ---> email till mig, kund, samt ett separat till leverantör med accept knapp som skickar tillbaka en bekräftelse till mig (gärna kund också).
+5. När de klickar på beställ ---> email till mig, kund, samt ett separat till leverantör med accept knapp som skickar tillbaka en bekräftelse till mig (gärna kund också). ------------------->OBS ------> Det fungerar nu för en email address --- testa lösning med 3 olika mailers (rails g mailer name), de är sammansatta via namn, därför vet rails vilken "mail view" som skall skickas, och det är viktigt att det är samma namn 
 
 6. Hur gör vi med consulthus? Egen databas? Eller egen view?

@@ -2,6 +2,13 @@
 
 const productarea =   $('.productarea').val()
 
+
+function confirm_order(){
+  $(".modal-body #bookId").val( document.cookie );
+
+
+}
+
 $(document).on('ready', function(){
   // $('.supplier').hide();;
   // $('.header').hide();
@@ -9,6 +16,24 @@ $(document).on('ready', function(){
   $('.signup_form').hide();
   $('.order_button').hide ();
 
+  $('.välj_leverator').click(function(e){
+
+// check for login
+if ($(".petterpetter").text() === 'true') {
+$('.btn.btn-primary.test').trigger('click')
+// show selected data, confirm and back button
+e.preventDefault();
+
+  confirm_order();
+
+
+} else {
+  var position = $('.position').val();
+  document.cookie = "position = "+ position
+  window.location = '/login'
+
+  }
+});
 
   $('.show').click(function(e){
     var isValid = true;

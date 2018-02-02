@@ -7,11 +7,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-
-     ExampleMailer.sample_email(@user).deliver_now
-
+      ConfirmationMailer.confirmation_email(@user).deliver_now
+      # ExampleMailer.supplier_order_confirmation(@supplier).deliver_now
+      # ExampleMailer.admin_order_confirmation(@admin).deliver_now
      redirect_to root_path # '/' something is also possible depending oon where you wanna send them.
-
     else
       redirect_to '/signup'
     end
