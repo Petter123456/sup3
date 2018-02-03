@@ -28,7 +28,9 @@ e.preventDefault();
 
 } else {
   var position = $('.position').val();
-  document.cookie = "position = "+ position
+  var supplier_id = $('.supplier_id').val();
+
+  document.cookie = "position = "+ position + "supplier_id" + supplier_id
   window.location = '/login'
 
   }

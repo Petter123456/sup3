@@ -32,8 +32,14 @@ class MainPagesController < ApplicationController
 end
 
   def confirm_order_and_email
+byebug
+    Contract.create(position: params[:confirm_position])
+
     @user = User.find(session[:user_id])
     ConfirmationMailer.confirmation_email(@user).deliver_now
+
+
+
   end
 
   def create
@@ -49,7 +55,7 @@ end
   end
 
   def main_params
-    params.require(:main_pages).permit(:city, :name, :email)
+    params.require(:main_pages).permit(:city, :name, :email, :position)
   end
 
 end
