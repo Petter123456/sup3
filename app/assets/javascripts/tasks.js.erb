@@ -2,40 +2,80 @@
 
 const productarea =   $('.productarea').val()
 
+//
+// function confirm_order(){
+//
+// var supplier_id = $('#supplier_id').text()
+//
+//
+//   $(".modal-body #confirm_position").val(supplier_id);
+//
+//
+//   // confirm_position = $(".position").val();
+//   //
+//   // confirm_supplier_id = $("#supplier_id").text();
+//   //
+//
+// };
 
-function confirm_order(){
-  $(".modal-body #confirm_position").val( document.cookie);
 
-};
 
 $(document).on('ready', function(){
   // $('.supplier').hide();;
   // $('.header').hide();
-  $('.login_form').hide();
-  $('.signup_form').hide();
-  $('.order_button').hide ();
+//pushes whatever user selects from form 1 and supplier selection into modal and new post form
+// push_user_values_to_modal_form()
 
-  $('.välj_leverator').click(function(e){
+// on click choose supplier
+  // $('.välj_leverator').click(function(e){
+//if logged in eq.true
+  // if ($(".petterpetter").text() === 'true') {
+    //confirm order btton in modal
+  // $('.btn.btn-primary.test').trigger('click')
+  // show selected data, confirm and back button
+//   e.preventDefault();
+//   confirm_order();
+//
+//
+//   } else {
+//     // var position = $('.position').val();
+//     //
+//     // document.cookie = "position = "+ position
+//     window.location = '/login'
+//
+//     }
+// });
 
-// check for login
-if ($(".petterpetter").text() === 'true') {
-$('.btn.btn-primary.test').trigger('click')
-// show selected data, confirm and back button
-e.preventDefault();
+///// THIS WORKS!!!!THIS WORKS!!!!!!!!
+$('.välj_leverator').click(function(event){
+  $('.btn.btn-primary.test').trigger('click')
+    var productarea = $('.productarea').val()
+    var position = $('#position').val()
+    var start_date = $("#start_date").val()
+    var end_date = $("#end_date").val()
+    var city = $("#city").val()
+    var percentage = $(".percentage").val()
+    var experience = $(".experience").val()
+    var salary = $("#salary").val()
 
-  confirm_order();
+  var string = "<h1 id='productarea'>" + productarea +"</h1>" + "<h1 id='position'>" + position +"</h1>" + "<h1 id='start_date'>" + start_date + "</h1>" + "<h1 id='end_date'>" + end_date + "</h1>" + "<h1 id='city'>" + city + "</h1>" + "<h1 id='percentage'>" + percentage + "</h1>" + "<h1 id='city'>" + experience + "</h1>" + "<h1 id='salary'>" + salary + "</h1>";
 
+  $('.modal-body').html(string);
+  event.preventDefault();
 
-} else {
-  var position = $('.position').val();
-  var supplier_id = $('.supplier_id').val();
-
-  document.cookie = "position = "+ position + "supplier_id" + supplier_id
-  window.location = '/login'
-
-  }
+  // SENDING DATA TO BACKEND
+  $('.btn.btn-secondary.confirm_order').click(function(){
+    $.ajax({
+      type: "GET",
+      url: "/confirm_order_and_email",
+      data: {productarea: productarea, position: position, start_date: start_date, end_date: end_date, city: city, percentage: percentage, experience: experience, salary: salary}
+    });
+  });
 });
 
+
+
+//ON CLICK OF SHOW SUPPLIER RESTRICTIONS
   $('.show').click(function(e){
     var isValid = true;
     // e.preventDefault(); // preventss default behavior
@@ -72,25 +112,7 @@ e.preventDefault();
       e.preventDefault();
     };
   });
-
-
-  $('.välj_leverator').click(function(){
-    $('.login_form').show();
-    return false;
-  });
-
-  $('.link_to_signup_form').click(function(){ //PROBLEM WHEN GENERATED SHOULD APPEAR INFRONT OF LOGIN_FORM & WHEN FILLED AND SUBMITTED SHOW ORDER_BUTTON
-    $('.signup_form').show();
-    return false;
-  });
-
-  $('.login_button').click(function(){
-    //PROBLEM IF LOGGED IN OK THEN SHOW:
-    $('.order_button').show();
-    return false;
-  });
-});
-
+//MINMUM SALARY DEEPENDING ON EXPERIANCE
 function MinSalaryIt() {
     if ($('.productarea .opts').val() === "IT" && $('.experience').val() === "1 year" && Number($('.salary').val()) < 33000){
         alert("The salary you have choosen for the given position is too low, please enter a realistic salary");
@@ -99,17 +121,14 @@ function MinSalaryIt() {
     else if ($('.productarea .opts').val() === "IT" && $('.experience').val() === "2 years" && Number($('.salary').val()) < 37000){
         alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
         return true
-
     }
     else if ($('.productarea .opts').val() === "IT" && $('.experience').val() === "3 years" && Number($('.salary').val()) < 40000){
         alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
         return true
-
     }
     else if ($('.productarea .opts').val() === "IT" && $('.experience').val() === "4 years" && Number($('.salary').val()) < 45000){
         alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
         return true
-
     }
     else if ($('.productarea .opts').val() === "IT" && $('.experience').val() === "5 years" && Number($('.salary').val()) < 50000){
         alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
@@ -117,7 +136,7 @@ function MinSalaryIt() {
     }
   };
 
-  function MinSalaryFinance() {
+function MinSalaryFinance() {
       if ($('.productarea .opts').val() === "Finance" && $('.experience').val() === "1 year" && Number($('.salary').val()) < 33000){
           alert("The salary you have choosen for the given position is too low, please enter a realistic salary");
           return true
@@ -139,15 +158,16 @@ function MinSalaryIt() {
           return true
       }
     };
+  });
 
-  function experianceVsPositionPercentage(){
+function experianceVsPositionPercentage(){
     var experience = $('.experience').val();
     var percentage = $('.percentage').val();
 
     if (percentage !== "100 %" && experience !== "Student" && experience !== "Just Graduated") {
-      alert("The person you are looking for will not be interested anything other than a fulltime position please update the position percentage or lower the level of experance to Just Graduated")
-      return true
-    }
+      alert("The person you are looking for will not be interested anything other than a fulltime position please update the position percentage or lower the level of experance to Just Graduated");
+      return trueM
+    };
   };
 
 

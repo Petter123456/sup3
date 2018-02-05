@@ -55,7 +55,7 @@ byebug
   end
 
   def main_params
-    params.require(:main_pages).permit(:city, :name, :email, :position)
+    params.require(:main_pages).permit(:city, :name, :email, :position, :date)
   end
 
 end
