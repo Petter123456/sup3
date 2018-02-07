@@ -58,7 +58,12 @@ $('.välj_leverator').click(function(event){
     var experience = $(".experience").val()
     var salary = $("#salary").val()
 
-  var string = "<h1 id='productarea'>" + productarea +"</h1>" + "<h1 id='position'>" + position +"</h1>" + "<h1 id='start_date'>" + start_date + "</h1>" + "<h1 id='end_date'>" + end_date + "</h1>" + "<h1 id='city'>" + city + "</h1>" + "<h1 id='percentage'>" + percentage + "</h1>" + "<h1 id='city'>" + experience + "</h1>" + "<h1 id='salary'>" + salary + "</h1>";
+    var supplier = event.target.closest('.supplier_div');
+    var supplier_name = supplier.children[0].childNodes[1].textContent;
+    var supplier_id = supplier.children[3].childNodes[1].textContent;
+    var supplier_price = supplier.children[4].childNodes[1].textContent;
+
+  var string = "<h1 id='productarea'>" + productarea +"</h1>" + "<h1 id='position'>" + position +"</h1>" + "<h1 id='start_date'>" + start_date + "</h1>" + "<h1 id='end_date'>" + end_date + "</h1>" + "<h1 id='city'>" + city + "</h1>" + "<h1 id='percentage'>" + percentage + "</h1>" + "<h1 id='city'>" + experience + "</h1>" + "<h1 id='salary'>" + salary + "</h1>"+ "<h1 id='supplier_name'>" + supplier_name + "</h1>"+ "<h1 id='supplier_id'>" + supplier_id + "</h1>"+ "<h1 id='supplier_price'>" + supplier_price + "</h1>";
 
   $('.modal-body').html(string);
   event.preventDefault();
@@ -68,12 +73,13 @@ $('.välj_leverator').click(function(event){
     $.ajax({
       type: "GET",
       url: "/confirm_order_and_email",
-      data: {productarea: productarea, position: position, start_date: start_date, end_date: end_date, city: city, percentage: percentage, experience: experience, salary: salary}
+      data: {contracts: { productarea: productarea, position: position, start_date: start_date, end_date: end_date, city: city, percentage: percentage, experience: experience, salary: salary, supplier: supplier_name, supplier_id: supplier_id, supplier_price: supplier_price}}
     });
   });
 });
 
-
+// { main_pages:{
+//
 
 //ON CLICK OF SHOW SUPPLIER RESTRICTIONS
   $('.show').click(function(e){

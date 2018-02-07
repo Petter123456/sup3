@@ -2,7 +2,7 @@ class MainPagesController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update, :destroy]
 
   def index
-    end
+  end
 
   def page_1
     # Product Areas
@@ -32,14 +32,10 @@ class MainPagesController < ApplicationController
 end
 
   def confirm_order_and_email
-byebug
-    Contract.create(position: params[:confirm_position])
+    Contract.create(main_params)
 
     @user = User.find(session[:user_id])
     ConfirmationMailer.confirmation_email(@user).deliver_now
-
-
-
   end
 
   def create
@@ -54,8 +50,10 @@ byebug
   def delete
   end
 
-  def main_params
-    params.require(:main_pages).permit(:city, :name, :email, :position, :date)
-  end
+  private
+
+    def main_params
+      params.require(:contracts).permit(:city, :name, :email, :position, :date, :productarea, :start_date, :end_date, :percentage, :experiance, :salary, :supplier_id, :supplier_price, :suppliers_name)
+    end
 
 end
