@@ -68,7 +68,7 @@ function experianceVsPositionPercentage(){
 
   if (percentage !== "100 %" && experience !== "Student" && experience !== "Just Graduated") {
     alert("The person you are looking for will not be interested anything other than a fulltime position please update the position percentage or lower the level of experance to Just Graduated");
-    return trueM
+    return true
   };
 };
 
@@ -101,8 +101,7 @@ function showSuppliers(){$('.show').click(function (e){
     isValid = false
   }
   else {
-    $('.supplier').show();;
-    $('.header').show();
+
     isValid = true
   };
   if (!isValid) {
