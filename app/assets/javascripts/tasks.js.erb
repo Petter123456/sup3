@@ -2,130 +2,14 @@
 
 const productarea =   $('.productarea').val()
 
-//
-// function confirm_order(){
-//
-// var supplier_id = $('#supplier_id').text()
-//
-//
-//   $(".modal-body #confirm_position").val(supplier_id);
-//
-//
-//   // confirm_position = $(".position").val();
-//   //
-//   // confirm_supplier_id = $("#supplier_id").text();
-//   //
-//
-// };
-
-
-
-$(document).on('ready', function(){
-  // $('.supplier').hide();;
-  // $('.header').hide();
-//pushes whatever user selects from form 1 and supplier selection into modal and new post form
-// push_user_values_to_modal_form()
-
-// on click choose supplier
-  // $('.välj_leverator').click(function(e){
-//if logged in eq.true
-  // if ($(".petterpetter").text() === 'true') {
-    //confirm order btton in modal
-  // $('.btn.btn-primary.test').trigger('click')
-  // show selected data, confirm and back button
-//   e.preventDefault();
-//   confirm_order();
-//
-//
-//   } else {
-//     // var position = $('.position').val();
-//     //
-//     // document.cookie = "position = "+ position
-//     window.location = '/login'
-//
-//     }
-// });
-
-///// THIS WORKS!!!!THIS WORKS!!!!!!!!
-$('.välj_leverator').click(function(event){
-  $('.btn.btn-primary.test').trigger('click')
-    var productarea = $('.productarea').val()
-    var position = $('#position').val()
-    var start_date = $("#start_date").val()
-    var end_date = $("#end_date").val()
-    var city = $("#city").val()
-    var percentage = $(".percentage").val()
-    var experience = $(".experience").val()
-    var salary = $("#salary").val()
-
-    var supplier = event.target.closest('.supplier_div');
-    var supplier_name = supplier.children[0].childNodes[1].textContent;
-    var supplier_id = supplier.children[3].childNodes[1].textContent;
-
-    console.log(supplier_id)
-    var supplier_price = supplier.children[4].childNodes[1].textContent;
-
-  var string = "<h1 id='productarea'>" + productarea +"</h1>" + "<h1 id='position'>" + position +"</h1>" + "<h1 id='start_date'>" + start_date + "</h1>" + "<h1 id='end_date'>" + end_date + "</h1>" + "<h1 id='city'>" + city + "</h1>" + "<h1 id='percentage'>" + percentage + "</h1>" + "<h1 id='city'>" + experience + "</h1>" + "<h1 id='salary'>" + salary + "</h1>"+ "<h1 id='supplier_name'>" + supplier_name + "</h1>"+ "<h1 id='supplier_id'>" + parseInt(supplier_id); + "</h1>"+ "<h1 id='supplier_price'>" + supplier_price + "</h1>";
-
-  $('.modal-body').html(string);
-  event.preventDefault();
-
-  // SENDING DATA TO BACKEND
-  $('.btn.btn-secondary.confirm_order').click(function(){
-    $.ajax({
-      type: "GET",
-      url: "/confirm_order_and_email",
-      data: {contracts: { productarea: productarea, position: position, start_date: start_date, end_date: end_date, city: city, percentage: percentage, experience: experience, salary: salary, supplier: supplier_name, supplier_id: supplier_id, supplier_price: supplier_price}}
-    });
-  });
-});
-
-// { main_pages:{
-//
-
-//ON CLICK OF SHOW SUPPLIER RESTRICTIONS
-  $('.show').click(function(e){
-    var isValid = true;
-    // e.preventDefault(); // preventss default behavior
-    if ($('.salary').val().length < 5) {
-      alert("Salary too low, please fill in realistic salary");
-      isValid = false
-    }
-    else if(Date.parse($('.start_date').val()) > Date.parse($('.end_date').val())){
-      alert("start datum kan inte förekomma efter slut datum");
-      isValid = false
-    }
-    else if(Date.parse($('.start_date').val()) < Date.now()){
-      alert("start datum måste förekomma efter dagens datum");
-      isValid = false
-    }
-    else if (experianceVsPositionPercentage() === true ){
-      // return false
-      isValid = false
-    }
-    else if (MinSalaryIt() === true ){
-      // return false
-      isValid = false
-    }
-    else if (MinSalaryFinance() === true ){
-      // return false
-      isValid = false
-    }
-    else {
-      $('.supplier').show();;
-      $('.header').show();
-      isValid = true
-    };
-    if (!isValid) {
-      e.preventDefault();
-    };
-  });
-//MINMUM SALARY DEEPENDING ON EXPERIANCE
 function MinSalaryIt() {
     if ($('.productarea .opts').val() === "IT" && $('.experience').val() === "1 year" && Number($('.salary').val()) < 33000){
         alert("The salary you have choosen for the given position is too low, please enter a realistic salary");
         return true
-    }
+    }  else if ($('.productarea .opts').val() === "IT" && $('.experience').val() === "Just Graduated" && Number($('.salary').val()) < 25000){
+          alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
+          return true
+      }
     else if ($('.productarea .opts').val() === "IT" && $('.experience').val() === "2 years" && Number($('.salary').val()) < 37000){
         alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
         return true
@@ -141,42 +25,134 @@ function MinSalaryIt() {
     else if ($('.productarea .opts').val() === "IT" && $('.experience').val() === "5 years" && Number($('.salary').val()) < 50000){
         alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
         return true
-    }
-  };
+    }     else if ($('.productarea .opts').val() === "IT" &&  Number($('.salary').val()) < 20000){
+            alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
+            return true
+        }
+};
 
 function MinSalaryFinance() {
-      if ($('.productarea .opts').val() === "Finance" && $('.experience').val() === "1 year" && Number($('.salary').val()) < 33000){
-          alert("The salary you have choosen for the given position is too low, please enter a realistic salary");
-          return true
-      }
-      else if ($('.productarea .opts').val() === "Finance" && $('.experience').val() === "2 years" && Number($('.salary').val()) < 37000){
+    if ($('.productarea .opts').val() === "Finance" && $('.experience').val() === "1 year" && Number($('.salary').val()) < 33000){
+        alert("The salary you have choosen for the given position is too low, please enter a realistic salary");
+        return true
+    }
+    else if ($('.productarea .opts').val() === "Finance" && $('.experience').val() === "Just Graduated" && Number($('.salary').val()) < 25000){
           alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
           return true
       }
-      else if ($('.productarea .opts').val() === "Finance" && $('.experience').val() === "3 years" && Number($('.salary').val()) < 40000){
-          alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
-          return true
-      }
-      else if ($('.productarea .opts').val() === "Finance" && $('.experience').val() === "4 years" && Number($('.salary').val()) < 45000){
-          alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
-          return true
-      }
-      else if ($('.productarea .opts').val() === "Finance" && $('.experience').val() === "5 years" && Number($('.salary').val()) < 50000){
-          alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
-          return true
-      }
-    };
-  });
-
-function experianceVsPositionPercentage(){
-    var experience = $('.experience').val();
-    var percentage = $('.percentage').val();
-
-    if (percentage !== "100 %" && experience !== "Student" && experience !== "Just Graduated") {
-      alert("The person you are looking for will not be interested anything other than a fulltime position please update the position percentage or lower the level of experance to Just Graduated");
-      return trueM
-    };
+    else if ($('.productarea .opts').val() === "Finance" && $('.experience').val() === "2 years" && Number($('.salary').val()) < 37000){
+        alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
+        return true
+    }
+    else if ($('.productarea .opts').val() === "Finance" && $('.experience').val() === "3 years" && Number($('.salary').val()) < 40000){
+        alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
+        return true
+    }
+    else if ($('.productarea .opts').val() === "Finance" && $('.experience').val() === "4 years" && Number($('.salary').val()) < 45000){
+        alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
+        return true
+    }
+    else if ($('.productarea .opts').val() === "Finance" && $('.experience').val() === "5 years" && Number($('.salary').val()) < 50000){
+        alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
+        return true
+    }     else if ($('.productarea .opts').val() === "Finance" &&  Number($('.salary').val()) < 20000){
+            alert("The salary you have choosen for the given position is too low, please enter a realistic salary")
+            return true
+        }
   };
 
+//MINMUM SALARY DEEPENDING ON EXPERIANCE
+function experianceVsPositionPercentage(){
+  var experience = $('.experience').val();
+  var percentage = $('.percentage').val();
 
-//
+  if (percentage !== "100 %" && experience !== "Student" && experience !== "Just Graduated") {
+    alert("The person you are looking for will not be interested anything other than a fulltime position please update the position percentage or lower the level of experance to Just Graduated");
+    return trueM
+  };
+};
+
+//ON CLICK OF SHOW SUPPLIER RESTRICTIONS
+function showSuppliers(){$('.show').click(function (e){
+  var isValid = true;
+  // e.preventDefault(); // preventss default behavior
+  if ($('.salary').val().length < 5) {
+    alert("Salary too low, please fill in realistic salary");
+    isValid = false
+  }
+  else if(Date.parse($('.start_date').val()) > Date.parse($('.end_date').val())){
+    alert("start datum kan inte förekomma efter slut datum");
+    isValid = false
+  }
+  else if(Date.parse($('.start_date').val()) < Date.now()){
+    alert("start datum måste förekomma efter dagens datum");
+    isValid = false
+  }
+  else if (experianceVsPositionPercentage() === true ){
+    // return false
+    isValid = false
+  }
+  else if (MinSalaryIt() === true ){
+    // return false
+    isValid = false
+  }
+  else if (MinSalaryFinance() === true ){
+    // return false
+    isValid = false
+  }
+  else {
+    $('.supplier').show();;
+    $('.header').show();
+    isValid = true
+  };
+  if (!isValid) {
+    e.preventDefault();
+  };
+});
+};
+
+
+///// THIS WORKS!!!!THIS WORKS!!!!!!!!
+function choose_Supplier(){$('.välj_leverator').click(function(event){
+
+  showSuppliers()
+
+  $('.btn.btn-primary.test').trigger('click')
+    var productarea = $('.productarea').val()
+    var position = $('#position').val()
+    var start_date = $("#start_date").val()
+    var end_date = $("#end_date").val()
+    var city = $("#city").val()
+    var percentage = $(".percentage").val()
+    var experience = $(".experience").val()
+    var salary = $("#salary").val()
+
+    var supplier = event.target.closest('.supplier_div');
+    var supplier_name = supplier.children[0].childNodes[1].textContent;
+    var supplier_id = supplier.children[3].childNodes[1].textContent;
+
+    var supplier_price = supplier.children[4].childNodes[1].textContent;
+
+  var string = "<h1 id='productarea'>" + productarea +"</h1>" + "<h1 id='position'>" + position +"</h1>" + "<h1 id='start_date'>" + start_date + "</h1>" + "<h1 id='end_date'>" + end_date + "</h1>" + "<h1 id='city'>" + city + "</h1>" + "<h1 id='percentage'>" + percentage + "</h1>" + "<h1 id='city'>" + experience + "</h1>" + "<h1 id='salary'>" + salary + "</h1>"+ "<h1 id='supplier_name'>" + supplier_name + "</h1>"+ "<h1 id='supplier_id'>" + parseInt(supplier_id); + "</h1>"+ "<h1 id='supplier_price'>" + supplier_price + "</h1>";
+
+  $('.modal-body').html(string);
+  event.preventDefault();
+
+  // SENDING DATA TO BACKEND
+  $('.btn.btn-secondary.confirm_order').click(function(){
+    $.ajax({
+      type: "GET",
+      url: "/confirm_order_and_email",
+      data: {contracts: { productarea: productarea, position: position, start_date: start_date, end_date: end_date, city: city, percentage: percentage, experience: experience, salary: salary, supplier_name: supplier_name, supplier_id: supplier_id, supplier_price: supplier_price}}
+    });
+  });
+});
+};
+
+$(document).on('ready', function(){
+
+    showSuppliers();
+
+    choose_Supplier();
+
+});
