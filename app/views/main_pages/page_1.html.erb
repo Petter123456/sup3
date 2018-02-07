@@ -26,7 +26,7 @@
     <option><%=experiance%></option>
   <%end%></select></br>
 
-  Monthly Salary:<%= text_field_tag :salary, params[:salary], class: 'salary'%>
+  Monthly Salary:<%= text_field_tag :salary, params[:salary], class: 'salary', readonly: params["salary"] ? true : false %>
   <!-- subitm button -->
   <button class="show">See Suppliers</button></br>
   <!-- Get right supplier deepending in city and product area -->

@@ -29,7 +29,7 @@ class MainPagesController < ApplicationController
     @assitance = params[:assitance].downcase rescue nil
 
     @salary_divided_by_hours = params[:salary].to_f / 162.5
-end
+  end
 
   def confirm_order_and_email
     # creating contracts generated through strong params which is populated from tasks.js deepending on user selection
