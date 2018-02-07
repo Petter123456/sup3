@@ -45,7 +45,7 @@
           <p><%= supplier.recruitment_percentage.to_i.floor%>% </p>
         <%end%>
         <%= div_for supplier, :class => "suppliers_id" do %>
-          <p><%=supplier.id%></p>
+          <p><%=supplier.id.to_i%></p>
         <%end%>
 
       <% if @assitance == "it" %>

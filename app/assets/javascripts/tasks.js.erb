@@ -61,9 +61,11 @@ $('.välj_leverator').click(function(event){
     var supplier = event.target.closest('.supplier_div');
     var supplier_name = supplier.children[0].childNodes[1].textContent;
     var supplier_id = supplier.children[3].childNodes[1].textContent;
+
+    console.log(supplier_id)
     var supplier_price = supplier.children[4].childNodes[1].textContent;
 
-  var string = "<h1 id='productarea'>" + productarea +"</h1>" + "<h1 id='position'>" + position +"</h1>" + "<h1 id='start_date'>" + start_date + "</h1>" + "<h1 id='end_date'>" + end_date + "</h1>" + "<h1 id='city'>" + city + "</h1>" + "<h1 id='percentage'>" + percentage + "</h1>" + "<h1 id='city'>" + experience + "</h1>" + "<h1 id='salary'>" + salary + "</h1>"+ "<h1 id='supplier_name'>" + supplier_name + "</h1>"+ "<h1 id='supplier_id'>" + supplier_id + "</h1>"+ "<h1 id='supplier_price'>" + supplier_price + "</h1>";
+  var string = "<h1 id='productarea'>" + productarea +"</h1>" + "<h1 id='position'>" + position +"</h1>" + "<h1 id='start_date'>" + start_date + "</h1>" + "<h1 id='end_date'>" + end_date + "</h1>" + "<h1 id='city'>" + city + "</h1>" + "<h1 id='percentage'>" + percentage + "</h1>" + "<h1 id='city'>" + experience + "</h1>" + "<h1 id='salary'>" + salary + "</h1>"+ "<h1 id='supplier_name'>" + supplier_name + "</h1>"+ "<h1 id='supplier_id'>" + parseInt(supplier_id); + "</h1>"+ "<h1 id='supplier_price'>" + supplier_price + "</h1>";
 
   $('.modal-body').html(string);
   event.preventDefault();

@@ -3,14 +3,18 @@ class ConfirmationMailer < ApplicationMailer
 
     def confirmation_email(user) #user from controller
       @user = user
-      mail(to: @user.email, subject: 'Sample Email')
-      mail(to: 'petter.fagerlund@gmail.com', subject: 'Admin Email')
+      mail(to: @user.email, subject: 'Order Confirmation')
     end
 
-    # def supplier_order_confirmation (supplier)
-    #   @supplier = supplier
-    #   mail(to: @supplier.email, subject: 'Sample Email')
-    # end
+    def confirmation_email_supplier(supplier) #user from controller
+      @supplier = supplier
+      mail(to: @supplier.email, subject: 'Order Confirmation')
+    end
+
+    def admin_order_confirmation (admin)
+      @admin = admin
+      mail(to: @admin, subject: 'Order Confirmation')
+    end
     #
     # def admin_order_confirmation (admin)
     #   @admin = admin
