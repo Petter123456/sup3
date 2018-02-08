@@ -33,7 +33,7 @@
 
   <% if @suppliers.present? %>
   <div class="wrapper">
-    <% @suppliers.map do |supplier| %>
+    <% @suppliers.each do |supplier| %>
     <div class='supplier_div'>
         <%= div_for supplier, :class => "suppliers_name" do %>
           <p><%= supplier.company %></p>
@@ -45,17 +45,17 @@
           <p><%= supplier.recruitment_percentage.to_i.floor%>% </p>
         <%end%>
         <%= div_for supplier, :class => "suppliers_id" do %>
-          <p><%=supplier.id.to_i%></p>
+          <p><%= hidden_field_tag supplier.id.to_i%></p>
         <%end%>
 
       <% if @assitance == "it" %>
         <%= div_for supplier, :class => "suppliers_price" do %>
-        <p>  <%= supplier.prices.map {|p| p.it.to_f * @salary_divided_by_hours.floor } %> </p>
+        <p>  <%= supplier.prices.map {|p| p.it.to_f * @salary_divided_by_hours.floor}.join("','") %> </p>
           <%= submit_tag 'choose supplier', class: 'välj_leverator'%>
         <%end%>
       <% elsif @assitance == "marketing" %>
         <%= div_for supplier, :class => "suppliers_price" do %>
-          <p><%= supplier.prices.map {|p| p.marketing.to_f} %></p>
+          <p><%= supplier.prices.map {|p| p.marketing.to_f}.join("','") %></p>
             <%= submit_tag 'choose supplier', class: 'välj_leverator'%>
           <%end%>
             <!-- KEEEP AND UPDATE #elseif   #@assitance == -->
