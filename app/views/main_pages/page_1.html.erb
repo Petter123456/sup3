@@ -56,24 +56,21 @@
       <% elsif @assitance == "marketing" %>
         <%= div_for supplier, :class => "suppliers_price" do %>
           <p><%= supplier.prices.map {|p| p.marketing.to_f} %></p>
-          <%= submit_tag 'choose supplier', class: 'välj_leverator'%>
-        <%end%>
+            <%= submit_tag 'choose supplier', class: 'välj_leverator'%>
+          <%end%>
             <!-- KEEEP AND UPDATE #elseif   #@assitance == -->
+          <%end%>
+        </div>
       <%end%>
     </div>
-
-    <%end%>
-  </div>
-
   <%end%>
-
 <%end%>
 
 
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary test" data-toggle="modal" data-target="#exampleModal">
+<button type="button" hidden="hidden" class="btn btn-primary test" data-toggle="modal" data-target="#exampleModal">
   Launch demo modal
 </button>
 
@@ -89,23 +86,17 @@
       </div>
       <div class="modal-body">
 
-        <!-- Gets input from cookie -->
-        <%= form_tag '/confirm_order_and_email', method: :post do%>
-          <input type="text" name="confirm_position" id="confirm_position" value=""/>
-
-          First Name:<input type="text" name="fname" id="fname"><br><br>
-    Last Name:<input type="text" name="lname" id="lname"><br><br>
-    Age:<input type="text" name="age" id="age"><br><br>
-
-
-<%= submit_tag 'Confirm Order', class:"btn btn-primary"%>
-//Continue Here!!!
-        <% end %>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
       <div class="modal-footer">
+        <p>Please speciy if you would like to Rent or Recruit staff</p>
+        <select class="rent_or_recruit" name="rent_or_recruit">
+          <option value="Rent">Rent</option>
+          <option value="Recruit">Recruit</option>
+        </select>
+
         <button type="button" class="btn btn-secondary confirm_order" data-dismiss="modal">confirm</button>
 
       </div>

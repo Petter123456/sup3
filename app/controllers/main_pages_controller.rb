@@ -32,8 +32,8 @@ class MainPagesController < ApplicationController
   end
 
   def confirm_order_and_email
-    # creating contracts generated through strong params which is populated from tasks.js deepending on user selection
 
+    # creating contracts generated through strong params which is populated from tasks.js deepending on user selection
     Contract.create(main_params)
 
 
@@ -78,7 +78,8 @@ class MainPagesController < ApplicationController
         :salary,
         :supplier_id,
         :supplier_price,
-        :supplier_name
+        :supplier_name,
+        :type_of_service
       )
     end
 
