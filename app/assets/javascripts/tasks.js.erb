@@ -157,16 +157,36 @@ $(document).on('ready', function(){
     choose_Supplier();
 
 
+  $('#productarea').val( localStorage.getItem("saveProductArea"));
+
+  $('.experience').val( localStorage.getItem("saveExperiance"));
+
+  $('.percentage').val( localStorage.getItem("savePercentage"));
+
 });
 
 
 
+function myFunction(e){
+
+  var prodArea = $('#productarea').val()
+  var experience = $('.experience').val()
+  var percentage = $('.percentage').val()
+
+
+  localStorage.setItem("saveProductArea", prodArea);
+  localStorage.setItem("saveExperiance", experience);
+  localStorage.setItem("savePercentage", percentage);
+
+
+  document.getElementById("main_form").submit();
+
+}
 
 
 
-
-
-
+// VIKTIGT ATTT SPARA TILL LÖN OM DEN INTE SKALL GÅ ATT ÄNDRA
+// , readonly: params["salary"] ? true : false
 
 
 

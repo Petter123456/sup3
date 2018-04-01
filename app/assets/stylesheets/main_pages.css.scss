@@ -23,3 +23,27 @@ text-align: center;
   border: solid;
   text-align: center;
 }
+
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  background-color: red;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  background-color: red;
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+background-color: red;
+
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  background-color: red;
+ }
