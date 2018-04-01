@@ -68,7 +68,7 @@
         <%end%>
       <% elsif @assitance == "marketing" %>
         <%= div_for supplier, :class => "suppliers_price" do %>
-        <p>  <%= supplier.prices.map {|p| p.marketing.to_f.floor * @salary_divided_by_hours.floor}.join("','") %> </p>
+        <p>  <%= supplier.prices.map {|p| p.marketing.to_f * @salary_divided_by_hours.floor}.join("','") %> </p>
             <%= submit_tag 'Välj Leverantör', class: 'välj_leverator'%>
 
           <%end%>
