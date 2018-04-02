@@ -1,4 +1,4 @@
-<p style="display: none;" class="petterpetter"><%= session[:user_id] ? 'true' : 'false'%></p>
+<p style="display: none;" class="petterpetter" id="petterpetter"><%= session[:user_id] ? 'true' : 'false'%></p>
 
 
 
@@ -114,7 +114,7 @@
           <option value="Recruit">Recruit</option>
         </select>
 
-        <button type="button" class="btn btn-secondary confirm_order" data-dismiss="modal">confirm</button>
+        <button onclick="notLoggedIn(event)" type="button" class="btn btn-secondary confirm_order" data-dismiss="modal" >confirm</button>
 
       </div>
     </div>

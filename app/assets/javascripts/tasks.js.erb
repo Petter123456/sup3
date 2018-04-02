@@ -187,6 +187,14 @@ function myFunction(e){
 
 
 
+function notLoggedIn(){
+  if (document.getElementById("petterpetter") !== true){
+    alert("Vänligen logga in för att göra en beställning");
+    document.getElementById("login").click();
+  }
+}
+
+
 // VIKTIGT ATTT SPARA TILL LÖN OM DEN INTE SKALL GÅ ATT ÄNDRA
 // , readonly: params["salary"] ? true : false
 
