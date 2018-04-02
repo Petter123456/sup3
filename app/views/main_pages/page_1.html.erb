@@ -1,9 +1,12 @@
 <p style="display: none;" class="petterpetter"><%= session[:user_id] ? 'true' : 'false'%></p>
 
+<%= link_to 'Reload', :page1 , id: "reset"%>
+
+
 
   <%= form_tag '/page1', method: :get , :id => 'main_form' do %>
   Area of Assistance:
-  <select class="productarea" name="assitance" id="productarea" onchange="myFunction(event)">
+  <select class="productarea" name="assitance" id="productarea" onchange="myFunction(event)" >
     <% @product_areas.each do |productarea| %>
       <option class="opts" id="opts"> <%=productarea %></option>
     <%end%></select><br>
@@ -29,7 +32,7 @@
 
     City:<%= text_field_tag :city, params[:city], :placeholder => 'Enter city', class: 'city', :required => true%></br>
 
-    Monthly Salary:<%= text_field_tag :salary, params[:salary], class: 'salary', onchange: "myFunction(event)"%>
+    Monthly Salary:<%= text_field_tag :salary, params[:salary], class: 'salary', readonly: params["salary"] ? true : false%>
 
 
   <!-- subitm button -->

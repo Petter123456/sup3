@@ -67,12 +67,13 @@
 
       if (percentage !== "100 %" && experience !== "Student" && experience !== "Just Graduated") {
         alert("The person you are looking for will not be interested anything other than a fulltime position please update the position percentage or lower the level of experance to Just Graduated");
-        return true
+       return true
       };
     };
 
     //ON CLICK OF SHOW SUPPLIER RESTRICTIONS
     function showSuppliers(){$('.show').click(function (e){
+
       var isValid = true;
       // e.preventDefault(); // preventss default behavior
       if ($('.salary').val().length < 5) {
@@ -173,14 +174,15 @@ function myFunction(e){
   var experience = $('.experience').val()
   var percentage = $('.percentage').val()
 
-
   localStorage.setItem("saveProductArea", prodArea);
   localStorage.setItem("saveExperiance", experience);
   localStorage.setItem("savePercentage", percentage);
+  //document.getElementById("main_form").submit();
 
-
-  document.getElementById("main_form").submit();
-
+  if (document.getElementsByClassName("supplier_div")[0]) {
+    // console.log("hej hej")
+    document.getElementById("reset").click();
+  };
 }
 
 
