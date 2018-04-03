@@ -16,3 +16,95 @@
    *= require_self
    *= require_tree .
    */
+
+
+   //Pop up on click of button "select of suppliers"
+   .wrapper_login_form{
+   text-align: center;
+   }
+   .login_form{
+     display: inline-block;
+     width: 30%;
+     border: solid;
+     text-align: center;
+   }
+
+   .wrapper_signup_form{
+   text-align: center;
+   }
+   .signup_form{
+     display: inline-block;
+     width: 30%;
+     border: solid;
+     text-align: center;
+   }
+
+
+
+   // Small devices (landscape phones, 576px and up)
+   @media (min-width: 576px) {
+
+    //FIRST PAGE
+    #submit_prod_area_div{
+    text-align: center;
+    align-items: center;
+      }
+    .submit_prod_area{
+      display: inline-block;
+      font-family: arial;color:#ffffff;font-size: 400%; background-color:#AFEEEE;
+      margin-top: 40px;
+     }
+
+    .header_index{
+      background-color: #AFEEEE;
+      height:500px;
+      align-items: center;
+    }
+    .h1_index{
+      display: inline-block;
+      font-family: arial;color:#ffffff;
+      font-size: 400%;
+      margin-top: 100px;
+      margin-left: 75px;
+    }
+    .h4_index{
+      font-family: arial;color:#ffffff;
+      margin-left: 75px;
+    }
+    .intro_text{
+      display: inline-block;
+      margin-top: 40px;
+      margin-left: 75px;
+      margin-right: 75px;
+      font-family: arial;color:#ffffff;
+      font-size: 130%;
+    }
+    .footer_index{
+      margin-top: 600px;
+      border-top: solid;
+      text-align: center;
+    }
+    .footer_index_text{
+      display: inline-block;
+      margin-top:65px;
+    }
+
+
+   }
+
+   // Medium devices (tablets, 768px and up)
+   @media (min-width: 768px) {
+     background-color: red;
+
+   }
+
+   // Large devices (desktops, 992px and up)
+   @media (min-width: 992px) {
+   background-color: red;
+
+    }
+
+   // Extra large devices (large desktops, 1200px and up)
+   @media (min-width: 1200px) {
+     background-color: red;
+    }
