@@ -6,6 +6,7 @@ root 'main_pages#index'
 get '/index' => 'suppliers#index'
 get '/page1' => 'main_pages#page_1', as: "page1"
 post '/page1' => 'main_pages#page_1'
+get '/om_oss' => 'main_pages#om_oss'
 
 
 get'/login' => 'sessions#new'

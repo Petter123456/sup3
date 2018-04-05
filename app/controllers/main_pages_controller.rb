@@ -33,6 +33,10 @@ class MainPagesController < ApplicationController
 
   end
 
+  def om_oss
+
+  end
+
   def confirm_order_and_email
 
     # creating contracts generated through strong params which is populated from tasks.js deepending on user selection

@@ -1,25 +1,36 @@
 
-  </select>
-
+<div class="top_menu">
+    <%= link_to "Login", '/login', class:'top_menu'%> | <%= link_to "Sign-up", '/signup', class:"top_menu"%>
+    | <%= link_to "Om Oss", '/om_oss', class:"top_menu" %>
+</div>
 <div class="header_index">
-
-  <h1 class="h1_index">rekryteringskoll.se</h1>
-  <h2 class="h4_index">Få full inblick i bemanning och rekryterings byråer!</h2>
-
+  <h1 class="h1_index">
+    rekryteringskoll.se
+  </h1>
+  <h2 class="h4_index">
+    Få full inblick i bemanning och rekryterings byråer!
+  </h2>
   <p class="intro_text">
     Rekryteringskoll.se är en enkel och smidig markandsplats där du kan jämföra priser på rekrytering och bemannings byrårer och välja den som passar bäst för dig och ditt bolag. Precis som du hade bokat en flygresa.
   </p>
+  <div id="submit_prod_area_div" >
+    <%= form_tag(page1_path, method: :get) do %>
+      <%= submit_tag 'Klicka här & jämför leverantörer', :class =>  "submit_prod_area"%>
+    <% end %>
+  </div>
 </div>
 
-<div id="submit_prod_area_div" >
-  <%= form_tag(page1_path, method: :get) do %>
-    <%= submit_tag 'Klicka här & jämför leverantörer', :class =>  "submit_prod_area"%>
-  <% end %>
-</div>
+  <div class="video_div">
+    <iframe width=100% height="630"
+    src="https://www.youtube.com/embed/tgbNymZ7vqY"class="video">
+    </iframe>
+  </div>
+  <div class="byråer">
+  </div>
+  <div class="footer_index">
 
-<div class="footer_index">
-  <p class="footer_index_text">
-    Pensionera Förmedling i Sverige AB <br> org.nr: 556976-8269 <br>
-Gumshornsgatan 7, 114 60 Stockholm
-  </p>
-</div>
+    <p class="footer_index_text">
+      Pensionera Förmedling i Sverige AB <br> org.nr: 556976-8269 <br>
+      Gumshornsgatan 7, 114 60 Stockholm
+    </p>
+  </div>
