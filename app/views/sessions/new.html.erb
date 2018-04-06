@@ -1,7 +1,17 @@
-<h1>Log In</h1>
+<body>
 
-<%= form_tag '/login' do %>
-Email: <%= text_field_tag :email, params[:email], :placeholder => 'Enter email', class: 'email_login', :required => true %>
-Password: <%= password_field_tag :password %>
-<%= submit_tag "Login" %>
+
+<div class="login_main_div">
+<div>
+<%= form_tag '/login', class:"login_form" do %>
+
+<p class="login_paragraphs">Email:</p>
+<%= text_field_tag :email, params[:email], :placeholder => 'Enter email', class: 'email_login', :required => true %>
+<p class="login_paragraphs">Password:</p>
+<%= password_field_tag :password, class:"password_login_tag"%>
+<%= submit_tag "Login", class:"submit_tag_login"%>
 <% end %>
+</div>
+</div>
+
+</body>

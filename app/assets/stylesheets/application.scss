@@ -84,7 +84,6 @@
      }
      .submit_prod_area:hover{
        font-size: 470%;
-
      }
 
     .header_index{
@@ -144,9 +143,76 @@
       width: 100%;
       margin-top: -12px;
     }
+    //////END OF FIRST PAGE//////////////////////////////////////////////////////////////////////////
+
+
+///////////////LOGIN//////////////
+/////////////////////////////////
+body{
+  background-color:#AFEEEE;
+
+}
+.login_main_div{
+  text-align: center;
+  background-color:#AFEEEE;
+  margin-top: 35%;
+
+}
+.login_main_div h1{
+  display: inline-block;
+  font-size: 500%;
+  color: white;
+}
+
+.login_form{
+  display: inline-block;
+  font-size: 500%;
+  width: 80%;
+  height: 80%;
+  border: 15px solid white;
+
+}
+
+.submit_tag_login{
+  border: solid;
+  width: 100%;
+  background-color:#AFEEEE;
+
+
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,.2);
+
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,0)));
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+  background-image: -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+  background-image: -ms-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+  background-image: -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+  background-image: linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+}
+.submit_tag_login:hover{
+  font-size: 110%;
+}
+.login_paragraphs{
+  width:80%;
+  text-align:left;
+  margin-left: 70px;
+  color:white;
+}
+
+.email_login{
+  border: solid white;
+  width: 80%;
+}
+#password{
+  border: solid white;
+  width: 80%;
+  margin-bottom: 30px;
+}
+.password_login_tag{
+  display: none;
+}
 
    }
-   //////END OF FIRST PAGE//////////////////////////////////////////////////////////////////////////
 
 
 
