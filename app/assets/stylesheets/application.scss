@@ -211,6 +211,62 @@ body{
 .password_login_tag{
   display: none;
 }
+.login_signup_path{
+  color: white;
+  margin-top: 20px;
+  font-size: 200%
+}
+////////////////////////END OF LOGIN////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+/////////////REGISTRATION///////////////
+///////////////////////////////////////
+////////////////////////////////////7//
+  .signup_form{
+    text-align: center;
+    width: 100%;
+    border: none;
+  }
+  .signup_form div {
+    width: 80%;
+    display: inline-block;
+    font-size: 300%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border: 15px solid white;
+
+  }
+  .signup_form div p {
+    text-align: left;
+    margin-left: 140px;
+    color: white;
+  }
+  .signup_submit_registration{
+    border: solid;
+    width: 100%;
+    background-color:#AFEEEE;
+    margin-top: 30px;
+    font-size: 130%;
+
+
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,.2);
+
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,0)));
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -ms-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+  }
+  .signup_submit_registration:hover{
+    font-size: 140%;
+
+  }
+
+
 
    }
 
