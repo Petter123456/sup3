@@ -125,7 +125,7 @@
 
     .footer_index{
       background-color:#AFEEEE;
-      border-top: solid;
+      border-top: solid white;
       text-align: center;
       height: 100%;
 
@@ -249,11 +249,8 @@ body{
     background-color:#AFEEEE;
     margin-top: 30px;
     font-size: 130%;
-
-
     color: #fff;
     text-shadow: 0 1px 0 rgba(0,0,0,.2);
-
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,0)));
     background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
     background-image: -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
@@ -263,9 +260,74 @@ body{
   }
   .signup_submit_registration:hover{
     font-size: 140%;
-
   }
+  ////////END OF REGISTRATION//////////////
+  /////////////////////////////////////////
+  /////////////////////////////////////////
+  /////////////////////////////////////////
 
+
+  ////////JÄMFÖR LEVERANTÖRER//////////////
+  ////////////////////////////////////////
+  ////////////////////////////////////////
+  .wrapper_main_page1{
+    text-align: left;
+  }
+  #main_form{
+    display: inline-block;
+    font-size: 150%;
+    color: white;
+    width: 30%;
+  }
+  #main_form div{
+    text-align: center;
+  }
+  .submit_jämför_lev{
+    border: solid;
+  }
+.productarea{
+  color: #AFEEEE;
+  border: solid white;
+}
+.percentage{
+  color: #AFEEEE;
+  border: solid white;
+}
+.experience{
+  color: #AFEEEE;
+  border: solid white;
+}
+
+  .show{
+    border: solid white;
+    width: 50%;
+    font-size: 500%;
+    margin-left: 400px;
+    position: absolute;
+    margin-top:-500px;
+    background-color:#AFEEEE;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,.2);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,0)));
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -ms-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+  }
+  .show:hover{
+    font-size: 540%;
+  }
+  #reset{
+  border: solid white;
+  background-color: #48D1CC;
+  margin-left: 400px;
+  position: absolute;
+  margin-top: -278px;
+  width: 490px;
+  text-align: center;
+  color: white;
+  }
 
 
    }
