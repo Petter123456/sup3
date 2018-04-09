@@ -13,6 +13,7 @@
     <%end%></select>
 
     <p>Position:</p>
+
     <%= text_field_tag :position, params[:position], :placeholder => 'Enter position title', class: 'position', :required => true%>
 
     <p>Position Percentage:</p>
@@ -51,43 +52,57 @@
 
   <%= link_to 'Nollställ Sökning', :page1 , id: "reset"%>
   <!-- Get right supplier deepending in city and product area -->
+<table>
+  <tr>
+    <th class="table_head">Leverantör</th>
+    <th class="table_head">Stad</th>
+    <th id="table_head_rek">Rekrytera</th>
+    <th id="table_head_hyr">Hyr/Timme</th>
+  </tr>
+  </table>
 
   <% if @suppliers.present? %>
   <div class="wrapper">
     <% @suppliers.each do |supplier| %>
     <div class='supplier_div'>
-      <table>
-        <tr>
-          <th>Leverantör</th>
-          <th>Stad</th>
-          <th>Rekryterings honorar</th>
-          <th>Bemannings pris per ttimme</th>
-        </tr>
 
 
-        <%= div_for supplier, :class => "suppliers_name" do %>
-          <p><%= supplier.company %></p>
+     <%= div_for supplier, :class => "suppliers_name" do %>
+  <p><%= supplier.company %></p>
         <%end%>
-          <%= div_for supplier, :class => "suppliers_city" do %>
-        <p> <%= supplier.city %></p>
+
+
+
+        <%= div_for supplier, :class => "suppliers_city" do %>
+        <p><%= supplier.city %></p>
         <%end%>
-        <%= div_for supplier, :class => "suppliers_recruitment_price" do %>
-          <p><%= supplier.recruitment_percentage.to_i.floor * @salary_multiplied_by_months.floor / 100%></p>
+
+        <%= div_for supplier, :class => "suppliers_recruitment_price", :id => "suppliers_recruitment_price" do %>
+  <p id="rek_pris"><%= supplier.recruitment_percentage.to_i.floor * @salary_multiplied_by_months.floor / 100%></p>
         <%end%>
+
         <%= div_for supplier, :class => "suppliers_id" do %>
           <p hidden><%=  supplier.id.to_i%></p>
         <%end%>
+
       <% if @assitance == "it" %>
+
         <%= div_for supplier, :class => "suppliers_price" do %>
-        <p>  <%= supplier.prices.map {|p| p.it.to_f.floor * @salary_divided_by_hours.floor}.join("','") %> </p>
-          <%= submit_tag 'Välj Leverantör', class: 'välj_leverator'%>
+        <p> <%= supplier.prices.map {|p| p.it.to_f.floor * @salary_divided_by_hours.floor}.join("','") %> </p>
+        <%= submit_tag 'Välj Leverantör', class: 'välj_leverator'%>
         <%end%>
+
       <% elsif @assitance == "marketing" %>
+
         <%= div_for supplier, :class => "suppliers_price" do %>
+
         <p>  <%= supplier.prices.map {|p| p.marketing.to_f * @salary_divided_by_hours.floor}.join("','") %> </p>
+
             <%= submit_tag 'Välj Leverantör', class: 'välj_leverator'%>
 
           <%end%>
+
+
             <!-- KEEEP AND UPDATE #elseif   #@assitance == -->
           <%end%>
         </div>

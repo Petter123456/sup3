@@ -289,6 +289,7 @@ body{
   color: #AFEEEE;
   border: solid white;
 }
+
 .percentage{
   color: #AFEEEE;
   border: solid white;
@@ -327,10 +328,58 @@ body{
   width: 490px;
   text-align: center;
   color: white;
+  font-size: 200%;
   }
 
+  table{
+    border-collapse: separate;
+       border-spacing: 20px 0px;
+     }
+#table_head_rek{
+position: fixed;
+margin-left: 28px;
+}
+#table_head_hyr{
+  position: fixed;
+  margin-left: 120px;
+}
+.suppliers_name{
+float:left;
+display:inline-block;margin-right:10px;
+margin-left: 20px;
 
-   }
+}
+
+.suppliers_city{
+  display:inline-block;
+  margin-left: 20px;
+}
+.suppliers_recruitment_price{
+  display:inline-block;
+  margin-left: 20px;
+
+}
+.suppliers_id{
+  display: inline-block;
+
+}
+.suppliers_price{
+  display:inline-block;
+  margin-left: 20px;
+
+
+}
+.suppliers_price p{
+  display:inline-block;
+  margin-left: 10px;
+}
+
+.välj_leverator{
+  margin-left: 60px;
+}
+
+
+}
 
 
 
