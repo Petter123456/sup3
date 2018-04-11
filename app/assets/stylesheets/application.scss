@@ -149,12 +149,12 @@
 ///////////////LOGIN//////////////
 /////////////////////////////////
 body{
-  background-color:#AFEEEE;
+  background-color:#45b3e0;
 
 }
 .login_main_div{
   text-align: center;
-  background-color:#AFEEEE;
+  background-color:#45b3e0;
   margin-top: 35%;
 
 }
@@ -176,7 +176,7 @@ body{
 .submit_tag_login{
   border: solid;
   width: 100%;
-  background-color:#AFEEEE;
+  background-color:#45b3e0;
 
 
   color: #fff;
@@ -246,7 +246,7 @@ body{
   .signup_submit_registration{
     border: solid;
     width: 100%;
-    background-color:#AFEEEE;
+    background-color:#45b3e0;
     margin-top: 30px;
     font-size: 130%;
     color: #fff;
@@ -286,16 +286,16 @@ body{
     border: solid;
   }
 .productarea{
-  color: #AFEEEE;
+  color: #45b3e0;
   border: solid white;
 }
 
 .percentage{
-  color: #AFEEEE;
+  color: #45b3e0;
   border: solid white;
 }
 .experience{
-  color: #AFEEEE;
+  color: #45b3e0;
   border: solid white;
 }
 
@@ -306,7 +306,7 @@ body{
     margin-left: 400px;
     position: absolute;
     margin-top:-500px;
-    background-color:#AFEEEE;
+    background-color:#45b3e0;
     color: #fff;
     text-shadow: 0 1px 0 rgba(0,0,0,.2);
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,0)));
@@ -332,64 +332,50 @@ body{
   }
 
   table{
-    border-collapse: separate;
-       border-spacing: 20px 0px;
+       font-size: 180%;
      }
-#table_head_rek{
-position: fixed;
-margin-left: 123px;
-}
-#table_head_hyr{
-  position: fixed;
-  margin-left: 230px;
-}
-#table_head_stad{
-  position: fixed;
-  margin-left: 40px;
-}
+  .table_head{
+    border-collapse: separate;
+        border-spacing: 60px;
+  }
+  #table_head_lever{
+        position: relative;
+        margin-left: 0px;
+       padding-right: 120px;
+     }
+     #table_head_stad{
+       padding-right: 100px;
+     }
+     #table_head_rek{
+       padding-right: 20px;
+     }
+
 .suppliers_name{
-float:left;
-display:inline-block;margin-right:10px;
-margin-left: 20px;
-
+  width: 240px;
 }
+     #supplier_1{
+       display:inline-block;margin-right:20px;
+       font-size: 180%;
+     }
+     #supplier_1 p{
+       display: inline-block;margin-right:20px;
+     }
 
-.suppliers_city{
-  display:inline-block;
-  margin-left: 60px;
-  float: left;
-}
+     #supplier_2{
+       display: inline-block;margin-right:20px;
+       font-size: 180%;
+
+     }
+     #supplier_2 p{
+       display: inline-block;margin-right:20px;
+     }
+
+     .välj_leverator{
+       padding-left: 70px;
+     }
 .suppliers_recruitment_price{
-  display:inline-block;
-  margin-left: 20px;
-
+  padding-left: 20px;
 }
-.suppliers_id{
-  display: inline-block;
-  margin-left: 1px;
-
-}
-.suppliers_price{
-  display:inline-block;
-  margin-left: 35px;
-
-
-}
-.suppliers_price p{
-  display:inline-block;
-  margin-left: 20px;
-}
-
-.välj_leverator{
-  margin-left: 60px;
-}
-#supplier_2 p:not(:first-child) {
-  margin-left: -20px;
-}
-#supplier_2{
-  margin-left: 20px;
-}
-
 
 ////////////////////END OF JÄMFÖR LEV//////////
 /////////////////////////////////

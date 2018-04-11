@@ -54,15 +54,16 @@
   <!-- Get right supplier deepending in city and product area -->
 <table>
   <tr>
-    <th class="table_head" id="table_head_lever">Leverantör</th>
+    <th  id="table_head_lever">Leverantör</th>
     <th class="table_head" id="table_head_stad">Stad</th>
-    <th id="table_head_rek">Rekrytera</th>
-    <th id="table_head_hyr">Hyr/Timme</th>
+    <th class="table_head" id="table_head_rek">Rekrytera</th>
+    <th class="table_head" id="table_head_hyr">Hyr/Timme</th>
   </tr>
   </table>
 
   <% if @suppliers.present? %>
   <div class="wrapper">
+
     <% @suppliers.each do |supplier| %>
     <div class='supplier_div'>
 
