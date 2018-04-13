@@ -149,7 +149,9 @@
 ///////////////LOGIN//////////////
 /////////////////////////////////
 body{
-  background-color:#45b3e0;
+  // background-color:#45b3e0;
+
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
 
 }
 .login_main_div{
@@ -246,6 +248,9 @@ body{
   .signup_submit_registration{
     border: solid;
     width: 100%;
+
+
+
     background-color:#45b3e0;
     margin-top: 30px;
     font-size: 130%;
@@ -285,16 +290,19 @@ body{
   .submit_jämför_lev{
     border: solid;
   }
-.productarea{
-  color: #45b3e0;
-  border: solid white;
+
+  .headers_form{
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+.percentage, .productarea, .experience{
+//   color: #45b3e0;
+//   border: solid white;
+width: 240px;
 }
 
-.percentage{
-  color: #45b3e0;
-  border: solid white;
-}
-.experience{
+#start_date, #end_date, #city, #position, #salary, .productarea, .percentage, .experience{
   color: #45b3e0;
   border: solid white;
 }
@@ -306,34 +314,52 @@ body{
     margin-left: 400px;
     position: absolute;
     margin-top:-500px;
-    background-color:#45b3e0;
-    color: #fff;
-    text-shadow: 0 1px 0 rgba(0,0,0,.2);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,0)));
-    background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-    background-image: -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-    background-image: -ms-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-    background-image: -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-    background-image: linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-  }
+
+background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+color:white;
+
+-webkit-border-radius: 12px;
+-moz-border-radius: 12px;
+border-radius: 12px;
+
+-webkit-box-shadow: 0px 15px 0px #009933, 0px 10px 25px rgba(0,0,0,.5);
+-moz-box-shadow: 0px 15px 0px #009933, 0px 10px 25px rgba(0,0,0,.5);
+box-shadow: 0px 15px 0px #009933, 0px 10px 25px rgba(0,0,0,.5);
+
+// margin: 50px auto;
+
+border-color: #66ff66;
+border-width: 10px;
+border-radius: 40px 100px 100px 100px;
+padding: 20px;
+}
   .show:hover{
     font-size: 540%;
   }
   #reset{
-  border: solid white;
-  background-color: #48D1CC;
-  margin-left: 400px;
+
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+
+  margin-left: 540px;
   position: absolute;
-  margin-top: -278px;
-  width: 490px;
+  margin-top: -190px;
+  width: 200px;
   text-align: center;
   color: white;
-  font-size: 200%;
+  font-size: 120%;
   }
 
   table{
        font-size: 180%;
+       color:white;
+      border-bottom: solid;
+      margin-bottom: 10px;
+      margin-top: 50px;
+      margin-left: 5px;
      }
+.supplier_div div p{
+  border-bottom:solid;
+}
   .table_head{
     border-collapse: separate;
         border-spacing: 60px;
@@ -341,38 +367,67 @@ body{
   #table_head_lever{
         position: relative;
         margin-left: 0px;
-       padding-right: 120px;
+       padding-right: 90px;
      }
      #table_head_stad{
        padding-right: 100px;
      }
      #table_head_rek{
-       padding-right: 20px;
+       padding-right: 30px;
      }
 
 .suppliers_name{
-  width: 240px;
+  width: 220px;
 }
      #supplier_1{
-       display:inline-block;margin-right:20px;
+       margin-left: 5px;
+
+       display:inline-block;margin-right:10px;
        font-size: 180%;
+       color:white;
      }
      #supplier_1 p{
        display: inline-block;margin-right:20px;
      }
 
      #supplier_2{
-       display: inline-block;margin-right:20px;
+       margin-left: 5px;
+
+       display: inline-block;margin-right:10px;
        font-size: 180%;
+       color:white;
 
      }
      #supplier_2 p{
        display: inline-block;margin-right:20px;
      }
 
-     .välj_leverator{
-       padding-left: 70px;
-     }
+  .välj_leverator{
+    margin-left: 40px;
+    margin-top: 5px;
+    padding-left: 80px;
+    color:#fff;
+    border:none;
+    padding:0 0em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    width: 220px;
+    align-items: center;
+
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    color:white;
+
+    border-color: #66ff66;
+    border-width: 3px;
+    border-radius: 20px 50px 50px 50px;
+}
+
+  .välj_leverator :hover {
+    background:#fff;
+      color:#1AAB8A;
+
+  }
 .suppliers_recruitment_price{
   padding-left: 20px;
 }
@@ -389,11 +444,50 @@ body{
 ////////////////////////////
 #exampleModal{
   font-size: 100%;
-  color: black;
-  margin-top: 150px;
+  margin-top: 10px;
+  background: white;
+  color: green;
+}
+.modal-body{
+  padding-left: 20px;
+}
+#exampleModalLabel{
+  font-style: bold;
+  font-size: 200%;
+}
+#exampleModal p{
+  color: green;
+  font-size: 150%;
+}
+#exampleModal button{
+  background: green;
+  width: 100%;
+  font-size: 180%;
+}
+#exampleModal .close{
+  width:80px;
+  height: 80%;
+background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+#exampleModal select option {
+  background: green;
+}
+.rent_or_recruit{
+  color: white;
+  width: 100%;
+  height: 55px;
+  font-size: 200%;
+      background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  padding-left: 160px !important;
 }
 
-
+#spec_rekbem{
+  width: 100%;
+  text-align: center;
+  color: #CD5C5C !important;
+  padding-left: 20px;
+  padding-right: 20px;
+  }
 }
 
 

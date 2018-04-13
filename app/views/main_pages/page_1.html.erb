@@ -4,7 +4,7 @@
 <div class="wrapper_main_page1">
 
   <%= form_tag '/page1', method: :get , :id => 'main_form' do %>
-  <p>Area of Assistance:</p>
+  <p class="headers_form">Area of Assistance:</p>
   <select class="productarea" name="assitance" id="productarea" onchange="myFunction(event)" >
     <% @product_areas.each do |productarea| %>
       <option class="opts" id="opts">
@@ -12,11 +12,11 @@
     </option>
     <%end%></select>
 
-    <p>Position:</p>
+    <p class="headers_form">Position:</p>
 
     <%= text_field_tag :position, params[:position], :placeholder => 'Enter position title', class: 'position', :required => true%>
 
-    <p>Position Percentage:</p>
+    <p class="headers_form">Position Percentage:</p>
       <select class="percentage" onchange="myFunction(event)">
     <% @position_percentage.each do |percentage| %>
         <option><%= percentage %></option>
@@ -25,21 +25,21 @@
   </select>
 
 
-  <p>Minimum Experiance:</p>
+  <p class="headers_form">Minimum Experiance:</p>
   <select class="experience" onchange="myFunction(event)">
   <%@level_of_experiance.each do |experiance| %><option><%=experiance%></option>
   <%end%></select>
 
-    <p>Start Date:</p>
+    <p class="headers_form">Start Date:</p>
     <%= date_field_tag :start_date, params[:start_date], class: 'start_date', :required => true%>
 
-    <p>End Date:</p>
+    <p class="headers_form">End Date:</p>
     <%= date_field_tag :end_date, params[:end_date], class: 'end_date', :required => true%>
 
-    <p>City:</p>
+    <p class="headers_form">City:</p>
     <%= text_field_tag :city, params[:city], :placeholder => 'Enter city', class: 'city', :required => true%>
 
-    <p>Monthly Salary:</p>
+    <p class="headers_form">Monthly Salary:</p>
     <%= text_field_tag :salary, params[:salary], :placeholder => 'Enter monthly salary', class: 'salary', readonly: params["salary"] ? true : false%>
 
 </div>
@@ -134,18 +134,19 @@
       <div class="modal-body">
 
       </div>
+          <p id="spec_rekbem">Vänligen välj om du vill rekrytera eller hyra in personal</p>
       <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+
+        <select class="rent_or_recruit" name="rent_or_recruit">
+          <option class="rent_or_recruit"  value="Rent">Rent</option>
+          <option class="rent_or_recruit" value="Recruit">Recruit</option>
+        </select>
       </div>
       <div class="modal-footer">
-        <p>Vänligen välj om du vill rekrytera eller hyra in personal</p>
-        <select class="rent_or_recruit" name="rent_or_recruit">
-          <option value="Rent">Rent</option>
-          <option value="Recruit">Recruit</option>
-        </select>
 
-        <button onclick="notLoggedIn(event)" type="button" class="btn btn-secondary confirm_order" data-dismiss="modal" >confirm</button>
 
+        <button onclick="notLoggedIn(event)" type="button" class="btn btn-secondary confirm_order" data-dismiss="modal" >Confirm</button>
       </div>
     </div>
   </div>
