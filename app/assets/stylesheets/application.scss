@@ -19,6 +19,12 @@
 
 
    //Pop up on click of button "select of suppliers"
+
+
+   .login_main_div div{
+
+   }
+
    .wrapper_login_form{
    text-align: center;
    }
@@ -27,10 +33,12 @@
      width: 30%;
      border: solid;
      text-align: center;
+      background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
    }
 
    .wrapper_signup_form{
    text-align: center;
+
    }
    .signup_form{
      display: inline-block;
@@ -39,20 +47,32 @@
      text-align: center;
    }
 
+.submit_tag_login{
+  background-color: blue;
+}
 
 
    // Small devices (landscape phones, 576px and up)
    @media (min-width: 576px) {
 
     //FIRST PAGE////////////////////////////////////////////////////////////////
+.header{
+  font-family: arial;color:#ffffff;
+  font-size: 100%;
+  width: 50%;
+}
+.header a{
+  font-family: arial;color:#ffffff;
+  font-size: 100%;
+  width: 50%;
+}
 
-    .header{
-      display:none;
-    }
     .top_menu{
       font-family: arial;color:#ffffff;
       font-size: 120%;
-      background-color: #AFEEEE;
+      float: right;
+      margin-top: -15px;
+
     }
     .top_menu:hover{
       color:#ffffff;
@@ -67,27 +87,32 @@
       // display: inline-block;
       // font-family: arial;color:#ffffff;
       font-size: 420%;
-      background-color:#AFEEEE;
+      background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+      color:white;
       margin-top: 90px;
       margin-left: 40px;
       margin-right: 85px;
+      border:white;
 
-      color: #fff;
       text-shadow: 0 1px 0 rgba(0,0,0,.2);
 
-      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,0)));
-      background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-      background-image: -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-      background-image: -ms-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-      background-image: -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-      background-image: linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      border-radius: 12px;
+
+      -webkit-box-shadow: 0px 15px 0px #009933, 0px 10px 25px rgba(0,0,0,.5);
+      -moz-box-shadow: 0px 15px 0px #009933, 0px 10px 25px rgba(0,0,0,.5);
+      box-shadow: 0px 15px 0px #009933, 0px 10px 25px rgba(0,0,0,.5);
+
+
+
      }
      .submit_prod_area:hover{
        font-size: 470%;
      }
 
     .header_index{
-      background-color: #AFEEEE;
       height:800px;
       align-items: center;
       border-bottom: solid;
@@ -124,21 +149,23 @@
     }
 
     .footer_index{
-      background-color:#AFEEEE;
+        background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
       border-top: solid white;
       text-align: center;
       height: 100%;
+      color: white;
 
     }
     .footer_index_text{
       display: inline-block;
-      margin-top:100px;
+      margin-top:50px;
+      margin-bottom: 50px;
       width: 100%;
       height: 100%;
     }
 
     .byråer{
-      background-color: lightgrey;
+      background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
       height: 350px;
       width: 100%;
       margin-top: -12px;
@@ -149,14 +176,12 @@
 ///////////////LOGIN//////////////
 /////////////////////////////////
 body{
-  // background-color:#45b3e0;
 
   background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
 
 }
 .login_main_div{
   text-align: center;
-  background-color:#45b3e0;
   margin-top: 35%;
 
 }
@@ -178,7 +203,6 @@ body{
 .submit_tag_login{
   border: solid;
   width: 100%;
-  background-color:#45b3e0;
 
 
   color: #fff;
@@ -251,7 +275,7 @@ body{
 
 
 
-    background-color:#45b3e0;
+
     margin-top: 30px;
     font-size: 130%;
     color: #fff;
@@ -297,7 +321,6 @@ body{
   }
 
 .percentage, .productarea, .experience{
-//   color: #45b3e0;
 //   border: solid white;
 width: 240px;
 }

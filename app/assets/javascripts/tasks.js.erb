@@ -181,6 +181,8 @@ function myFunction(e){
   localStorage.setItem("savePercentage", percentage);
   //document.getElementById("main_form").submit();
 
+
+
   if (document.getElementsByClassName("supplier_div")[0]) {
     // console.log("hej hej")
     document.getElementById("reset").click();
@@ -190,10 +192,18 @@ function myFunction(e){
 
 
 function notLoggedIn(){
-  if (document.getElementById("petterpetter") !== true){
+  if ($('.petterpetter').text()
+ === "false"){
     alert("Vänligen logga in för att göra en beställning");
     document.getElementById("login").click();
+  } else if ($('.petterpetter').text()
+==="true") {
+  alert("Tack för din beställning! Du har nu fått en orderbekräftelse till din mail, och leverantören du valde kommer kontakta dig inom kort")
+  document.getElementById("reset").click();
+
+
   }
+
 }
 
 

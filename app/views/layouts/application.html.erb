@@ -21,11 +21,13 @@
 
   <body>
     <div class="header">
+
       <% if current_user %>
       Welcome <%= current_user.name %> | <%= link_to "logout", '/logout' %>
       <% else %>
-      <%= link_to "Login", '/login', id: "login" %> | <%= link_to "Sign-up", '/signup', id:"signup"%> | <%= link_to "Jämför Leverantörer", '/page1', id:"jämför" %>
+      <%= link_to "Login", '/login', id: "login" %> | <%= link_to "Sign-up", '/signup', id:"signup"%> | <%#= link_to "Jämför Leverantörer", '/page1', id:"jämför" %>
       <% end %>
+
     </div>
     <%= yield %>
     <%= console %>

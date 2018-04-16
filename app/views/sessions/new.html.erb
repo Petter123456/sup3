@@ -2,7 +2,7 @@
 
 
   <div class="login_main_div">
-    <div>
+    <div id="signup_path_div">
       <%= form_tag '/login', class:"login_form" do %>
         <p class="login_paragraphs">Email:</p>
       <%= text_field_tag :email, params[:email], :placeholder => 'Enter email', class: 'email_login', :required => true %>

@@ -85,7 +85,8 @@ class MainPagesController < ApplicationController
         :supplier_id,
         :supplier_price,
         :supplier_name,
-        :type_of_service
+        :type_of_service,
+        :telephone_number
       )
     end
 
