@@ -3,21 +3,21 @@
 <div class="signup_form">
     <div>
     <%= form_for :user, class:"signup_form" do |form| %>
-    <p>Name:</p>
+    <p>Namn:</p>
     <%= form.text_field :name, required: true%>
     <p>Email:</p>
     <%= form.text_field :email, required: true %>
-    <p>Telephone:</p>
+    <p>Telefon:</p>
     <%= form.text_field :telephone_number, required: true %>
-    <p>Company: </p>
+    <p>Företag: </p>
     <%= form.text_field :company, required: true %>
-    <p>Company Number: </p>
+    <p>Org.Nummer: </p>
     <%= form.text_field :company_number, required: true %>
-  <p>Password:</p>
+  <p>Lösenord:</p>
   <%= form.password_field :password, required: true %>
-<p>Password Confirmation: </p>
+<p>Bekräfta Lösenord: </p>
 <%= form.password_field :password_confirmation, required: true %> <br>
-    <%= form.submit "Sign Up", class:"signup_submit_registration"%>
+    <%= form.submit "Registrera", class:"signup_submit_registration"%>
     <% end %>
   </div>
 </div>

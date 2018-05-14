@@ -26,43 +26,12 @@
 }
 
 
-   .login_main_div div{
 
-   }
-
-   .wrapper_login_form{
-   text-align: center;
-   }
-   .login_form{
-     display: inline-block;
-     width: 30%;
-     border: solid;
-     text-align: center;
-    background-color: #0d46a0;
-
-
-   }
-
-   .wrapper_signup_form{
-   text-align: center;
-   background-color: #002071;
-
-   }
-   .signup_form{
-     display: inline-block;
-     width: 30%;
-     border: solid;
-     text-align: center;
-     background-color: #002071;
-   }
-
-.submit_tag_login{
-  background-color: #5471d2;
-}
 
 
    // Small devices (landscape phones, 576px and up)
    @media (min-width: 576px) {
+
 
     //FIRST PAGE////////////////////////////////////////////////////////////////
 .header{
@@ -187,7 +156,7 @@ background-color: #002171;
 
 .login_main_div{
   text-align: center;
-  margin-top: 35%;
+  margin-top: 25%;
 
 }
 .login_main_div h1{
@@ -208,11 +177,8 @@ background-color: #002171;
 .submit_tag_login{
   border: solid;
   width: 100%;
-
-
   color: #fff;
   text-shadow: 0 1px 0 rgba(0,0,0,.2);
-
   background-color: #002171;
 }
 .submit_tag_login:hover{
@@ -221,7 +187,8 @@ background-color: #002171;
 .login_paragraphs{
   width:80%;
   text-align:left;
-  margin-left: 70px;
+  margin-left: 50px;
+  margin-top: 20px;
   color:white;
 }
 
@@ -242,6 +209,26 @@ background-color: #002171;
   margin-top: 20px;
   font-size: 200%
 }
+.login_main_div div{
+   height: 50%;
+   widows: 50%;
+   font-size: 50%;
+}
+.wrapper_login_form{
+text-align: center;
+}
+.login_form{
+  display: inline-block;
+  width: 50%;
+  border: solid #fff;
+  text-align: center;
+ background-color: #0d46a0;
+}
+.submit_tag_login{
+background-color: #002071;
+}
+
+
 ////////////////////////END OF LOGIN////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 
@@ -262,27 +249,38 @@ background-color: #002171;
     margin-top: 50px;
     margin-bottom: 30px;
     border: 15px solid white;
+    background-color: #0d47a1;
+    display: inline-block;
+    font-size: 100%;
+
 
   }
   .signup_form div p {
     text-align: left;
-    margin-left: 140px;
+    margin-left: 153px;
+    margin-top: 10px;
     color: white;
   }
   .signup_submit_registration{
     border: solid;
     width: 100%;
-
-
-
-
     margin-top: 30px;
     font-size: 130%;
     color: #fff;
-    background-color:#5471d2;
+
   }
-  .signup_submit_registration:hover{
-    font-size: 140%;
+
+  .wrapper_signup_form{
+  text-align: center;
+
+  }
+
+  .signup_form div{
+    width: 50%;
+  }
+
+  .signup_submit_registration{
+  background-color: #002071;
   }
   ////////END OF REGISTRATION//////////////
   /////////////////////////////////////////
@@ -547,10 +545,69 @@ background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
 }
 
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
    // Medium devices (tablets, 768px and up)
    @media (min-width: 768px) {
+    ////////////////
+    ///////////////
+    ////////////////
+    ///REGISTRATION
+    ////////////////
+    #user_name, #user_email, #user_telephone_number, #user_company, #user_company_number, #user_password, #user_password_confirmation{
+      width:200px;
+    }
+
+    .signup_form div p{
+      text-align: left;
+    margin-left: 363px;
+    margin-top: 20px;
+    color: white;
+    font-size: 120%;
+    }
+    .signup_submit_registration{
+      font-size: 200%;
+    }
+    /////////////////////////
+    /////////////////////////
+    ////END OF REGISTRATION
+    ///////////////////////
+
+
+    //////////////////////
+    /////////////////////
+    ////LOGIN///////////
+    ///////////////////
+    .login_paragraphs {
+    width: 80%;
+    text-align: left;
+    margin-left: 90px;
+    margin-top: 20px;
+    color: white;
+    }
+
+    .login_form {
+    display: inline-block;
+    width: 50%;
+    border: solid #fff;
+    text-align: center;
+    background-color: #0d46a0;
+    margin-top: -180px;
+    }
+    //////////////
+    //////////////
+    //////////////
+    //END OF LOGIN
+    ///////////////
+    ///////////////
+
+
+
+     ///////////////
+     //////////////
+     //START INDEX//
+     //////////////
+     //////////////
 
      .submit_prod_area{
        font-size: 300%;
@@ -573,18 +630,44 @@ background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
 
       }
 
-      ///////////////////////
+      /////////////////////
       //////////////////////
+      /////////////////////
+      ////////////////////
       //END OF INDEX PAGE////
 
+
+      /////////////////
+      ////////////////
+      ////////////////
+      ///PAGE 1/////////
+      ///////////////
+
       #show{
-        margin-left: 600px;
+        margin-left: 770px;
         width: 500px;
         height: 500px;
         margin-top: -600px;
       }
 
       .instruktioner p {
+        font-size: 120%;
+      }
+
+      .supplier_div p{
+        font-size: 140%;
+      }
+      .suppliers_description{
+        width: 600px;
+        font-style: italic;
+      }
+      .suppliers_name{
+        width: 300px;
+      }
+      #rek_pris{
+        width: 300px;
+      }
+      .välj_leverator{
         font-size: 120%;
       }
    }
