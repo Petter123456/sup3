@@ -33,11 +33,14 @@
      width: 30%;
      border: solid;
      text-align: center;
-      background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    background-color: #0d46a0;
+
+
    }
 
    .wrapper_signup_form{
    text-align: center;
+   background-color: #002071;
 
    }
    .signup_form{
@@ -45,10 +48,11 @@
      width: 30%;
      border: solid;
      text-align: center;
+     background-color: #002071;
    }
 
 .submit_tag_login{
-  background-color: blue;
+  background-color: #5471d2;
 }
 
 
@@ -57,21 +61,29 @@
 
     //FIRST PAGE////////////////////////////////////////////////////////////////
 .header{
-  font-family: arial;color:#ffffff;
+  font-family: arial;
+background-color: #002171;
   font-size: 100%;
-  width: 50%;
+  width: 100%;
+  height: 30px;
+  color: white;
+  text-align: bottom;
+  align-items: bottom;
 }
 .header a{
   font-family: arial;color:#ffffff;
   font-size: 100%;
   width: 50%;
+
 }
 
     .top_menu{
       font-family: arial;color:#ffffff;
       font-size: 120%;
       float: right;
-      margin-top: -15px;
+      margin-top: -29px;
+      margin-right: 10px;
+
 
     }
     .top_menu:hover{
@@ -79,33 +91,20 @@
     }
 
     #submit_prod_area_div{
-    text-align: center;
-    align-items: center;
+    text-align: right;
+    align-items: right;
+    margin-top: -17%;
       }
+
     .submit_prod_area{
-      // border: solid black;
-      // display: inline-block;
-      // font-family: arial;color:#ffffff;
-      font-size: 420%;
-      background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+      height: 200px;
+      width: 200px;
+      background-color: #0d46a0;
       color:white;
-      margin-top: 90px;
-      margin-left: 40px;
-      margin-right: 85px;
+      margin-right: 140px;
       border:white;
-
-      text-shadow: 0 1px 0 rgba(0,0,0,.2);
-
-
-      -webkit-border-radius: 12px;
-      -moz-border-radius: 12px;
-      border-radius: 12px;
-
-      -webkit-box-shadow: 0px 15px 0px #009933, 0px 10px 25px rgba(0,0,0,.5);
-      -moz-box-shadow: 0px 15px 0px #009933, 0px 10px 25px rgba(0,0,0,.5);
-      box-shadow: 0px 15px 0px #009933, 0px 10px 25px rgba(0,0,0,.5);
-
-
+      border-radius: 100%;
+      font-size: 200%;
 
      }
      .submit_prod_area:hover{
@@ -113,21 +112,23 @@
      }
 
     .header_index{
-      height:800px;
+      height:200px;
       align-items: center;
       border-bottom: solid;
+      background-color: #0d46a0;
     }
     .h1_index{
       display: inline-block;
       font-family: arial;color:#ffffff;
       font-size: 600%;
-      margin-top: 100px;
+      margin-top: 40px;
       margin-left: 75px;
     }
     .h4_index{
-      font-family: arial;color:#ffffff;
+      font-family: arial;color:black;
       margin-left: 75px;
-      font-size: 200%;
+      margin-top: 60px;
+      font-size: 140%;
       font-style: italic;
 
     }
@@ -135,9 +136,11 @@
       display: inline-block;
       margin-top: 40px;
       margin-left: 75px;
-      margin-right: 75px;
-      font-family: arial;color:#ffffff;
-      font-size: 200%;
+      margin-right: 52%;
+      font-family: arial;color:black;
+      font-size: 120%;
+      text-align: justify;
+
     }
 
 
@@ -149,7 +152,7 @@
     }
 
     .footer_index{
-        background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+        background-color: #002171;
       border-top: solid white;
       text-align: center;
       height: 100%;
@@ -175,11 +178,8 @@
 
 ///////////////LOGIN//////////////
 /////////////////////////////////
-body{
 
-  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
 
-}
 .login_main_div{
   text-align: center;
   margin-top: 35%;
@@ -197,7 +197,7 @@ body{
   width: 80%;
   height: 80%;
   border: 15px solid white;
-
+  background-color: #0d46a0;
 }
 
 .submit_tag_login{
@@ -208,12 +208,7 @@ body{
   color: #fff;
   text-shadow: 0 1px 0 rgba(0,0,0,.2);
 
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,0)));
-  background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-  background-image: -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-  background-image: -ms-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-  background-image: -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-  background-image: linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+  background-color: #002171;
 }
 .submit_tag_login:hover{
   font-size: 110%;
@@ -279,13 +274,7 @@ body{
     margin-top: 30px;
     font-size: 130%;
     color: #fff;
-    text-shadow: 0 1px 0 rgba(0,0,0,.2);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,0)));
-    background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-    background-image: -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-    background-image: -ms-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-    background-image: -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-    background-image: linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-color:#5471d2;
   }
   .signup_submit_registration:hover{
     font-size: 140%;
@@ -302,11 +291,33 @@ body{
   .wrapper_main_page1{
     text-align: left;
   }
+
+.instruktioner{
+  color: white;
+  background-color: #0d46a0;
+}
+
+.instruktioner h1 {
+  margin-left: 5%;
+  padding-top: 15px;
+  width: 50%;
+}
+
+.instruktioner p {
+  margin-left: 5%;
+  margin-right: 53%;
+  width: 50%;
+  text-align: justify;
+}
+
   #main_form{
     display: inline-block;
     font-size: 150%;
-    color: white;
+    color: black;
     width: 30%;
+    margin-left: 5%;
+    // border: 0.5px solid;
+
   }
   #main_form div{
     text-align: center;
@@ -319,6 +330,9 @@ body{
     margin-top: 10px;
     margin-bottom: 0px;
   }
+  #salary{
+    margin-bottom: 5px;
+  }
 
 .percentage, .productarea, .experience{
 //   border: solid white;
@@ -326,107 +340,117 @@ width: 240px;
 }
 
 #start_date, #end_date, #city, #position, #salary, .productarea, .percentage, .experience{
-  color: #45b3e0;
-  border: solid white;
+  color:white;
+  background-color:#002171;
+
 }
+
+
 
   .show{
     border: solid white;
-    width: 50%;
-    font-size: 500%;
-    margin-left: 400px;
+    margin-left: 500px;
     position: absolute;
     margin-top:-500px;
 
-background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
-color:white;
+    height: 350px;
+    width: 350px;
+    background-color: #0d46a0;
+    color:white;
+    border:white;
+    border-radius: 100%;
+    font-size: 300%;
 
--webkit-border-radius: 12px;
--moz-border-radius: 12px;
-border-radius: 12px;
-
--webkit-box-shadow: 0px 15px 0px #009933, 0px 10px 25px rgba(0,0,0,.5);
--moz-box-shadow: 0px 15px 0px #009933, 0px 10px 25px rgba(0,0,0,.5);
-box-shadow: 0px 15px 0px #009933, 0px 10px 25px rgba(0,0,0,.5);
-
-// margin: 50px auto;
-
-border-color: #66ff66;
-border-width: 10px;
-border-radius: 40px 100px 100px 100px;
-padding: 20px;
 }
-  .show:hover{
-    font-size: 540%;
-  }
+
   #reset{
 
-  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  color: red;
 
-  margin-left: 540px;
-  position: absolute;
-  margin-top: -190px;
-  width: 200px;
-  text-align: center;
-  color: white;
-  font-size: 120%;
+
   }
 
   table{
+
        font-size: 180%;
        color:white;
       border-bottom: solid;
       margin-bottom: 10px;
       margin-top: 50px;
-      margin-left: 5px;
+      margin-left: 5%;
      }
-.supplier_div div p{
-  border-bottom:solid;
-}
+
   .table_head{
     border-collapse: separate;
         border-spacing: 60px;
+        margin-left: 5%;
+
   }
+
+
   #table_head_lever{
         position: relative;
-        margin-left: 0px;
        padding-right: 90px;
+        color:black;
      }
      #table_head_stad{
        padding-right: 100px;
+       color:black;
+
      }
      #table_head_rek{
        padding-right: 30px;
+       color:black;
+     }
+     #table_head_hyr{
+       color:black;
      }
 
 .suppliers_name{
-  width: 220px;
+  padding-right: 20px;
+  font-weight: bold;
 }
-     #supplier_1{
-       margin-left: 5px;
+.suppliers_description{
+  width:400px;
+}
 
-       display:inline-block;margin-right:10px;
-       font-size: 180%;
-       color:white;
+#rek_pris{
+  padding-right: 20px;
+}
+.suppliers_price p{
+  padding-right: 20px;
+}
+
+
+.supplier_div{
+  margin-left: 5%;
+}
+
+     #supplier_1{
+
+       display:inline-block;
+       font-size: 100%;
+       color:black;
+       border:none;
+
      }
      #supplier_1 p{
-       display: inline-block;margin-right:20px;
+       display: inline-block;
      }
 
      #supplier_2{
-       margin-left: 5px;
 
-       display: inline-block;margin-right:10px;
-       font-size: 180%;
-       color:white;
+       display: inline-block;
+       font-size: 100%;
+       color:black;
 
      }
      #supplier_2 p{
-       display: inline-block;margin-right:20px;
+       display: inline-block;
      }
 
   .välj_leverator{
-    margin-left: 40px;
+    margin-left: 10px;
     margin-top: 5px;
     padding-left: 80px;
     color:#fff;
@@ -438,8 +462,7 @@ padding: 20px;
     width: 220px;
     align-items: center;
 
-    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
-    color:white;
+    background-color: #0d46a0;
 
     border-color: #66ff66;
     border-width: 3px;
@@ -466,26 +489,28 @@ padding: 20px;
 ////////////////////////////
 ////////////////////////////
 #exampleModal{
-  font-size: 100%;
   margin-top: 10px;
   background: white;
-  color: green;
+  color: #002171;
+  height: 100% !important;
+  width: 600px !important;
+  border-radius: 0px !important;
+  font-size: 100%;
 }
+
 .modal-body{
   padding-left: 20px;
 }
 #exampleModalLabel{
   font-style: bold;
-  font-size: 200%;
 }
 #exampleModal p{
-  color: green;
-  font-size: 150%;
+  color: black;
+  background-color: white;
 }
 #exampleModal button{
-  background: green;
+  background: #0d46a0;
   width: 100%;
-  font-size: 180%;
 }
 #exampleModal .close{
   width:80px;
@@ -498,11 +523,14 @@ background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
 .rent_or_recruit{
   color: white;
   width: 100%;
-  height: 55px;
-  font-size: 200%;
-      background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-  padding-left: 160px !important;
+  height: 30px;
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  padding-left: 210px !important;
 }
+.confirm_order{
+  font-size: 200%;
+}
+
 
 #spec_rekbem{
   width: 100%;
