@@ -20,6 +20,11 @@
 
    //Pop up on click of button "select of suppliers"
 
+*{
+  font-family:'Vollkorn', serif;
+
+}
+
 
    .login_main_div div{
 
@@ -546,17 +551,52 @@ background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
 
    // Medium devices (tablets, 768px and up)
    @media (min-width: 768px) {
-     background-color: red;
 
+     .submit_prod_area{
+       font-size: 300%;
+       margin-top: 150px;
+       height:300px;
+       width: 300px;
+      }
+      .h4_index{
+        font-size: 200%;
+      }
+
+      .intro_text{
+        font-size: 150%;
+      }
+      .footer_index{
+      margin-top: 330px;
+      }
+      .byråer{
+        height: 500px;
+
+      }
+
+      ///////////////////////
+      //////////////////////
+      //END OF INDEX PAGE////
+
+      #show{
+        margin-left: 600px;
+        width: 500px;
+        height: 500px;
+        margin-top: -600px;
+      }
+
+      .instruktioner p {
+        font-size: 120%;
+      }
    }
 
    // Large devices (desktops, 992px and up)
    @media (min-width: 992px) {
-   background-color: red;
+     .submit_prod_area{
+       font-size: 500%;
+     }
 
     }
 
    // Extra large devices (large desktops, 1200px and up)
    @media (min-width: 1200px) {
-     background-color: red;
     }
