@@ -6,11 +6,11 @@ class MainPagesController < ApplicationController
 
   def page_1
     # Product Areas
-    @product_areas = ["IT", "Finance", "Marketing", "Call Center", "Technology",]
+    @product_areas = ["IT", "Finans/Ekonomi", "Marketing", "Call Center", "Technology",]
     # Position Percentages
-    @position_percentage = ["10%",'20 %','30 %','40 %', '50 %', '60 %', '70 %', '80 %', '90 %', '100 %']
+    @position_percentage = ["10 %",'20 %','30 %','40 %', '50 %', '60 %', '70 %', '80 %', '90 %', '100 %']
     # Experiance
-    @level_of_experiance = ["Student","Just Graduated", "1 year", "2 Years", "3 years", "4 years", "5 years", "5 + years" ]
+    @level_of_experiance = ["Student","Nyexad", "1 år", "2 år", "3 år", "4 år", "5 år", "5 + år" ]
     # Min Month Salary
     @monthly_salary = []
     i = 20000
