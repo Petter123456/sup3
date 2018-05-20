@@ -11,7 +11,6 @@ gem 'rails-erd'
 gem 'rails', '~> 5.1.4'
 # Use pg as the database for Active Record
 gem 'pg', '~> 0.18.4'
-gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 #for stlyling
 gem 'bootstrap', '~> 4.0.0'
 # Use Puma as the app server
