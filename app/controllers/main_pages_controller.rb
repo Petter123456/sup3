@@ -6,7 +6,7 @@ class MainPagesController < ApplicationController
 
   def page_1
     # Product Areas
-    @product_areas = ["IT", "Finans/Ekonomi", "Marketing", "Call Center", "Technology",]
+    @product_areas = ["IT", "Finans/Ekonomi", "Marknadsföring", "Kundtjänst", "Teknologi/Ingenjörer", "Lager/Logistik"]
     # Position Percentages
     @position_percentage = ["10 %",'20 %','30 %','40 %', '50 %', '60 %', '70 %', '80 %', '90 %', '100 %']
     # Experiance
@@ -27,6 +27,8 @@ class MainPagesController < ApplicationController
     end
     #Product area gets different prices
     @assitance = params[:assitance].downcase rescue nil
+
+
 
     @salary_divided_by_hours = params[:salary].to_f / 162.5
     @salary_multiplied_by_months = params[:salary].to_f * 12.floor

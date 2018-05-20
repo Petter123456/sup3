@@ -99,7 +99,7 @@
       <% if @assitance == "it" %>
 
         <%= div_for supplier, :class => "suppliers_price" do %>
-        <p> Hyr per timme: <%= supplier.prices.map {|p| p.it.to_f.floor * @salary_divided_by_hours.floor}.join("','") %> kr</p>
+        <p> Hyr per timme: <%= supplier.prices.map {|p| p.it.to_i * @salary_divided_by_hours.to_i}.join("','") %> kr</p>
 
 
         <%= submit_tag 'Träffa Leverantör', class: 'välj_leverator'%>
@@ -107,11 +107,11 @@
 
         <%end%>
 
-      <% elsif @assitance == "marketing" %>
+      <% elsif @assitance == "marknadsföring" %>
 
         <%= div_for supplier, :class => "suppliers_price" do %>
 
-        <p>  Hyr per timme: <%= supplier.prices.map {|p| p.marketing.to_f * @salary_divided_by_hours.floor}.join("','") %> </p>
+        <p>  Hyr per timme: <%= supplier.prices.map {|p| p.marketing.to_f * @salary_divided_by_hours.round(0)}.join("','") %> </p>
 
             <%= submit_tag 'Träffa Leverantör', class: 'välj_leverator'%>
 
@@ -121,13 +121,13 @@
 
             <%= div_for supplier, :class => "suppliers_price" do %>
 
-            <p> Hyr per timme: <%= supplier.prices.map {|p| p.finance.to_f * @salary_divided_by_hours.floor}.join("','") %> </p>
+            <p> Hyr per timme: <%= supplier.prices.map {|p| p.finance.to_f * @salary_divided_by_hours.to_i}.join("','") %> </p>
 
                 <%= submit_tag 'Träffa Leverantör', class: 'välj_leverator'%>
 
               <%end%>
 
-              <% elsif @assitance == "call center" %>
+              <% elsif @assitance == "kundtjänst" %>
 
                 <%= div_for supplier, :class => "suppliers_price" do %>
 
@@ -136,19 +136,25 @@
                     <%= submit_tag 'Välj Leverantör', class: 'välj_leverator'%>
 
                   <%end%>
-                  <% elsif @assitance == "technology" %>
+                  <% elsif @assitance == "teknologi/ingenjörer" %>
 
                     <%= div_for supplier, :class => "suppliers_price" do %>
 
-                    <p> Hyr per timme: <%= supplier.prices.map {|p| p.technology.to_f * @salary_divided_by_hours.floor}.join("','") %> </p>
-
-
-
-
+                    <p> Hyr per timme: <%= supplier.prices.map {|p| p.technology.to_f * @salary_divided_by_hours.round(0)}.join("','") %> </p>
 
                         <%= submit_tag 'Träffa Leverantör', class: 'välj_leverator'%>
 
                       <%end%>
+
+                      <% elsif @assitance == "lager/logistik" %>
+
+                        <%= div_for supplier, :class => "suppliers_price" do %>
+
+                        <p> Hyr per timme: <%= supplier.prices.map {|p| p.logisticts.to_f * @salary_divided_by_hours.round(0)}.join("','") %> </p>
+
+                            <%= submit_tag 'Träffa Leverantör', class: 'välj_leverator'%>
+
+                          <%end%>
 
 
             <!-- KEEEP AND UPDATE #elseif   #@assitance == -->

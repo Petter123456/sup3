@@ -77,7 +77,7 @@
       var isValid = true;
       // e.preventDefault(); // preventss default behavior
       if ($('.salary').val().length < 5) {
-        alert("Salary too low, please fill in realistic salary");
+        alert("Lön för den aktuella ställningen är för låg, vänligen öka lönsnivån");
         isValid = false
       }
       else if(Date.parse($('.start_date').val()) > Date.parse($('.end_date').val())){
@@ -185,7 +185,8 @@ function myFunction(e){
 
   if (document.getElementsByClassName("supplier_div")[0]) {
     // console.log("hej hej")
-    document.getElementById("reset").click();
+    //document.getElementById("reset").click();
+    window.location.reload()
   };
 }
 
