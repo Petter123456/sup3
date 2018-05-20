@@ -1,4 +1,5 @@
 {
+  "scripts": { "start": "server.js" },
   "name": "recruitment8",
   "private": true,
   "dependencies": {},
