@@ -1,5 +1,6 @@
 {
-  "scripts": { "start": "server.js" },
+
+  "scripts": {"start": "node index.js"},
   "name": "recruitment8",
   "private": true,
   "dependencies": {},
