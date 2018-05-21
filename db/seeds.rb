@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Supplier.create(company: "Framtiden", company_number: nil, company_representative: nil, second_representative: nil, email: "petter.fagerlund@gmail.com", telephone: nil, city: "göteborg", recruitment_percentage: "25", description: "Vi är bäst på unga talanger med upp till 5 års erf...")
+Supplier.create(id:2, company: "Framtiden", company_number: nil, company_representative: nil, second_representative: nil, email: "petter.fagerlund@gmail.com", telephone: nil, city: "göteborg", recruitment_percentage: "25", description: "Vi är bäst på unga talanger med upp till 5 års erf...")
 
-Supplier.create(company: "Effektiv", company_number: nil, company_representative: nil, second_representative: nil, email: "petter.fagerlund@gmail.com", telephone: nil, city: "göteborg", recruitment_percentage: "30", description: "För vinnare i arbetslivet")
+Supplier.create(id:3, company: "Effektiv", company_number: nil, company_representative: nil, second_representative: nil, email: "petter.fagerlund@gmail.com", telephone: nil, city: "göteborg", recruitment_percentage: "30", description: "För vinnare i arbetslivet")
+
+Price.create(id:1, it: "3.0", finance: "2.3", call_center: "2.0", logisticts: "2.0", marketing: "2.1", technology: "2.8", supplier_id: 2)
+
+Price.create(id:2, it: "1.0", finance: "2.6", call_center: "2.1", logisticts: "1.5", marketing: "2.0", technology: "2.4", supplier_id: 3)
