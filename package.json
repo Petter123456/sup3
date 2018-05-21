@@ -1,5 +1,8 @@
 {
 
+  "scripts": {
+      "start": "node ./index.js"
+  },
 
 
   "name": "recruitment8",
@@ -7,9 +10,6 @@
   "dependencies": {},
   "devDependencies": {
     "webpack": "^4.8.3",
-    "webpack-dev-server": "^3.1.4",
-    "scripts": {
-        "start": "node ./index.js"
-    }
+    "webpack-dev-server": "^3.1.4"
   }
 }
