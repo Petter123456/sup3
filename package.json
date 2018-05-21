@@ -1,4 +1,11 @@
 {
+
+  "scripts": {
+      "start": "node your-script.js"
+  },
+
+
+
   "name": "recruitment8",
   "private": true,
   "dependencies": {},
