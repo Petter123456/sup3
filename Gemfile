@@ -11,7 +11,11 @@ gem 'rails-erd'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use pg as the database for Active Record
-gem 'pg', '~> 0.18.4'
+
+group :production do
+  gem 'pg', '~> 0.18.4'
+end
+
 #for stlyling
 gem 'bootstrap', '~> 4.0.0'
 # Use Puma as the app server
