@@ -1,6 +1,6 @@
 {
 
-  "scripts": {"start": "node index.js"},
+  "scripts": {"start": "node tasks.js"},
   "name": "recruitment8",
   "private": true,
   "dependencies": {},
