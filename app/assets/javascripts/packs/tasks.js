@@ -234,11 +234,13 @@
       else {
 
         isValid = true
+
       };
       if (!isValid) {
         e.preventDefault();
         };
       });
+      window.scrollTo(0,document.body.scrollHeight);
     };
     ///// THIS WORKS!!!!THIS WORKS!!!!!!!!
     function choose_Supplier(){$('.välj_leverator').click(function(event){
