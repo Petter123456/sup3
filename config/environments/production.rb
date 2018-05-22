@@ -95,15 +95,26 @@ Rails.application.configure do
 
 # Gmail mailer . reference launchschool
 
+config.action_mailer.delivery_method = :sendmail
+# Defaults to:
+# config.action_mailer.sendmail_settings = {
+#   location: '/usr/sbin/sendmail',
+#   arguments: '-i'
+# }
+config.action_mailer.perform_deliveries = true
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.default_options = {from: 'petter.fagerlund@gmail.com'}
+
 
 config.action_mailer.delivery_method = :smtp
-# SMTP settings for gmail
 config.action_mailer.smtp_settings = {
- :address              => "smtp.gmail.com",
- :port                 => 587,
- :user_name            => ENV['gmail_username'],
- :password             => ENV['gmail_password'],
- :authentication       => "plain",
-:enable_starttls_auto => true
+address:              'smtp.gmail.com',
+port:                 587,
+domain:               'example.com',
+user_name:            'wyncodeemailer@gmail.com',
+password:             'petter123',
+authentication:       'plain',
+enable_starttls_auto: true
+
 }
 end
