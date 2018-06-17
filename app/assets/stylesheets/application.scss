@@ -27,111 +27,71 @@
 
 
 
-
-
    // Small devices (landscape phones, 576px and up)
    @media (min-width: 576px) {
+//FIRST PAGE///////////////////////////////////////////////////////////////
 
-
-    //FIRST PAGE////////////////////////////////////////////////////////////////
-.header{
-  font-family: arial;
-background-color: #002171;
-  font-size: 100%;
-  width: 100%;
-  height: 30px;
+.navbar{
+  float: right;
+  width:100%;
+  margin-top: 0px;
+  background-color: #3192db;
+  height: 115px;
   color: white;
-  text-align: bottom;
-  align-items: bottom;
+  position: absolute;
+  margin-top: 0px;
 }
-.header a{
-  font-family: arial;color:#ffffff;
-  font-size: 100%;
-  width: 50%;
-
+.navbar a{
+  color: white;
 }
 
-    .top_menu{
-      font-family: arial;color:#ffffff;
-      font-size: 120%;
-      float: right;
-      margin-top: -29px;
-      margin-right: 10px;
+.navbar h1{
+  padding-top: 56px;
+  padding-left: 30px;
+}
+.nav-tabs li{
+  padding-left: 50px;
+  font-size: 120%;
+  padding-top: 56px;
+}
 
+.h4{
+padding-top:140px;
+margin-bottom: 30px;
+font-family: Bevan, sans-serif;
+color: #3192db;
+font-size: 60px;
+line-height: 70px;
+font-weight: 400;
+text-align: center;
+}
+.premble{
+  max-width: 90%;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 22px;
+    line-height: 35px;
+    text-align: center;
+}
 
-    }
-    .top_menu:hover{
-      color:#ffffff;
-    }
-
-    #submit_prod_area_div{
-    text-align: right;
-    align-items: right;
-    margin-top: -22%;
-      }
-
-    .submit_prod_area{
-      height: 200px;
-      width: 200px;
-      background-color: #0d46a0;
-      color:white;
-      margin-right: 140px;
-      border:white;
-      border-radius: 100%;
-      font-size: 200%;
-
+#submit_prod_area_div{
+  text-align: center !important;
+  padding-top: 40px;
+}
+.btn{
+  height: 200px;
+  width: 400px;
+  font-size: 400%;
      }
-     .submit_prod_area:hover{
-       font-size: 470%;
-     }
-
-    .header_index{
-      height:200px;
-      align-items: center;
-      border-bottom: solid;
-      background-color: #0d46a0;
-    }
-    .h1_index{
-      display: inline-block;
-      font-family: arial;color:#ffffff;
-      font-size: 600%;
-      margin-top: 40px;
-      margin-left: 75px;
-    }
-    .h4_index{
-      font-family: arial;color:black;
-      margin-left: 75px;
-      margin-top: 60px;
-      font-size: 140%;
-      font-style: italic;
-
-    }
-    .intro_text{
-      display: inline-block;
-      margin-top: 40px;
-      margin-left: 75px;
-      margin-right: 52%;
-      font-family: arial;color:black;
-      font-size: 120%;
-      text-align: justify;
-
-    }
-
-
-    .video_div{
-      text-align: center;
-    }
-    .video{
-      display: inline-block;
-    }
 
     .footer_index{
-        background-color: #002171;
+      background-color: #3192db;
       border-top: solid white;
       text-align: center;
-      height: 100%;
       color: white;
-
+      margin-top: 100px;
+      margin-bottom: 0% !important;
     }
     .footer_index_text{
       display: inline-block;
@@ -140,23 +100,14 @@ background-color: #002171;
       width: 100%;
       height: 100%;
     }
-
-    .byråer{
-      background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
-      height: 350px;
-      width: 100%;
-      margin-top: -12px;
-    }
-    //////END OF FIRST PAGE//////////////////////////////////////////////////////////////////////////
+//////END OF FIRST PAGE//////////////////////////////////////////////////////////////////////////
 
 
 ///////////////LOGIN//////////////
 /////////////////////////////////
-
-
 .login_main_div{
   text-align: center;
-  margin-top: 25%;
+  padding-top: 25%;
 
 }
 .login_main_div h1{
@@ -227,8 +178,6 @@ text-align: center;
 .submit_tag_login{
 background-color: #002071;
 }
-
-
 ////////////////////////END OF LOGIN////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 
@@ -241,6 +190,7 @@ background-color: #002071;
     text-align: center;
     width: 100%;
     border: none;
+    padding-top: 10%;
   }
   .signup_form div {
     width: 80%;
@@ -257,7 +207,7 @@ background-color: #002071;
   }
   .signup_form div p {
     text-align: left;
-    margin-left: 153px;
+    margin-left: 338px;
     margin-top: 10px;
     color: white;
   }
@@ -288,28 +238,30 @@ background-color: #002071;
   /////////////////////////////////////////
 
 
-  ////////JÄMFÖR LEVERANTÖRER//////////////
-  ////////////////////////////////////////
-  ////////////////////////////////////////
-  .wrapper_main_page1{
-    text-align: left;
+////////JÄMFÖR LEVERANTÖRER//////////////
+////////////////////////////////////////
+////////////////////////////////////////
+.wrapper_main_page1{
+  text-align: left;
   }
 
 .instruktioner{
-  color: white;
-  background-color: #0d46a0;
+color: black;
+background-color: white;
+padding-top:12%;
+font-size: 120%;
 }
 
 .instruktioner h1 {
-  margin-left: 5%;
+  margin-left: 50px;
   padding-top: 15px;
-  width: 50%;
+  width: 90%;
 }
 
 .instruktioner p {
-  margin-left: 5%;
+  margin-left: 50px;
   margin-right: 53%;
-  width: 50%;
+  width: 90%;
   text-align: justify;
 }
 
@@ -317,8 +269,8 @@ background-color: #002071;
     display: inline-block;
     font-size: 120%;
     color: black;
-    width: 30%;
-    margin-left: 5%;
+    width: 35%;
+    margin-left: 50px;
     // border: 0.5px solid;
 
   }
@@ -332,7 +284,7 @@ background-color: #002071;
   .headers_form{
     margin-top: 10px;
     margin-bottom: 0px;
-    font-size: 80%;
+    font-size: 120%;
   }
   #salary{
     margin-bottom: 5px;
@@ -341,38 +293,24 @@ background-color: #002071;
 .percentage, .productarea, .experience, .position, .start_date, .end_date, .city, .salary{
 //   border: solid white;
   width: 240px;
-  font-size: 70%;
+  font-size: 90%;
 }
 
 #start_date, #end_date, #city, #position, #salary, .productarea, .percentage, .experience{
   color:white;
-  background-color:#002171;
+  background-color:#3192db;
 
 }
-
-
-
-  .show{
-    border: solid white;
-    margin-left: 500px;
-    position: absolute;
-    margin-top:-500px;
-
-    height: 350px;
-    width: 350px;
-    background-color: #0d46a0;
-    color:white;
-    border:white;
-    border-radius: 100%;
-    font-size: 300%;
-
+#show{
+  height: 200px !important;
+  width: 500px !important;
+  margin-left: 30%;
+  margin-top: -42%;
 }
 
   #reset{
-
   color: red;
-
-
+  width:100px;
   }
 
   table{
@@ -455,30 +393,13 @@ background-color: #002071;
      }
 
   .välj_leverator{
-    margin-left: 10px;
-    margin-top: 5px;
-    padding-left: 80px;
+  background-color: #3192db;
     color:#fff;
-    border:none;
-    padding:0 0em;
-    cursor:pointer;
-    transition:800ms ease all;
-    outline:none;
-    width: 220px;
-    align-items: center;
+ }
 
-    background-color: #0d46a0;
-
-    border-color: #66ff66;
-    border-width: 3px;
-    border-radius: 20px 50px 50px 50px;
-}
-
-  .välj_leverator :hover {
-    background:#fff;
-      color:#1AAB8A;
-
-  }
+input.välj_leverator:hover {
+ background-color: darkblue;
+ }
 .suppliers_recruitment_price{
   padding-left: 20px;
 }
@@ -501,6 +422,7 @@ background-color: #002071;
   width: 600px !important;
   border-radius: 0px !important;
   font-size: 100%;
+  margin: 0 auto 0 auto
 }
 
 .modal-body{
@@ -560,13 +482,7 @@ background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
       width:200px;
     }
 
-    .signup_form div p{
-      text-align: left;
-    margin-left: 363px;
-    margin-top: 20px;
-    color: white;
-    font-size: 120%;
-    }
+
     .signup_submit_registration{
       font-size: 200%;
     }
@@ -624,9 +540,7 @@ background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
       .intro_text{
         font-size: 150%;
       }
-      .footer_index{
-      margin-top: 330px;
-      }
+
       .byråer{
         height: 500px;
 
@@ -645,12 +559,6 @@ background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
       ///PAGE 1/////////
       ///////////////
 
-      #show{
-        margin-left: 550px;
-        width: 400px;
-        height: 400px;
-        margin-top: -450px
-      }
 
       .instruktioner p {
         font-size: 90%;

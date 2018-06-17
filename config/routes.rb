@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 root 'main_pages#index'
 
-
+get 'main_page' => 'main_pages#index'
 get '/index' => 'suppliers#index'
 get '/page1' => 'main_pages#page_1', as: "page1"
 post '/page1' => 'main_pages#page_1'

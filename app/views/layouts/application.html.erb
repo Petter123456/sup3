@@ -21,15 +21,32 @@
   </head>
 
   <body>
-    <div class="header">
 
-      <% if current_user %>
-      Welcome <%= current_user.name %> | <%= link_to "logout", '/logout' %>
-      <% else %>
-      <%= link_to "Login", '/login', id: "login" %> | <%= link_to "Sign-up", '/signup', id:"signup"%> | <%#= link_to "Jämför Leverantörer", '/page1', id:"jämför" %>
-      <% end %>
+    <nav class="navbar navbar-default navbar-fixed-top">
 
-    </div>
+        <h1 class="h1_index">
+          Digirek.se
+        </h1>
+        <ul class="nav nav-tabs">
+          <li role="presentation">
+            <%= link_to "Hem", '/main_page', id: "mainpage" %>
+          </li>
+          <li role="presentation">
+            <%= link_to "Hitta leverantörer", '/page1', id: "mainpage" %>
+          </li>
+          <li role="presentation" class="active">
+            <%= link_to "Om Oss", '/om_oss', class:"top_menu" %>
+          </li>
+          <li role="presentation" class="active">
+            <% if current_user %>
+            Welcome <%= current_user.name %> | <%= link_to "logout", '/logout' %>
+            <% else %>
+            <%= link_to "Login", '/login', id: "login" %> | <%= link_to "Sign-up", '/signup', id:"signup"%>  <%#= link_to "Jämför Leverantörer", '/page1', id:"jämför" %>
+            <% end %>
+          </li>
+        </ul>
+    </nav>
+
     <%= yield %>
     <%#=# console %>
   </body>

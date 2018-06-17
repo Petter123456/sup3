@@ -10,6 +10,8 @@
 
 </div>
 
+
+
 <div class="wrapper_main_page1">
 
   <%= form_tag '/page1', method: :get , :id => 'main_form' do %>
@@ -51,14 +53,18 @@
     <p class="headers_form">Månadslön:</p>
     <%= text_field_tag :salary, params[:salary], :placeholder => 'Skriv in månadslön', class: 'salary', readonly: params["salary"] ? true : false%>
 
+  <%= link_to 'Nollställ Sök', :page1 , id: "reset"%>
 
-      <%= link_to 'Nollställ Sök', :page1 , id: "reset"%>
 
 </div>
 
 
   <!-- subitm button -->
-  <button class="show" id="show">Hitta Leverantörer</button>
+
+
+  <button class="submit_prod_area, btn btn-primary btn-lg" id="show">Sök Byråer
+  </button>
+
 
   <br>
 
@@ -99,10 +105,10 @@
       <% if @assitance == "it" %>
 
         <%= div_for supplier, :class => "suppliers_price" do %>
-        <p> Hyr per timme: <%= supplier.prices.map {|p| p.it.to_i * @salary_divided_by_hours.to_i}.join("','") %> kr</p>
+        <p> Hyr per timme: <%= supplier.prices.map {|p| p.it.to_f * @salary_divided_by_hours.to_i}.join("','") %> kr</p>
 
 
-        <%= submit_tag 'Träffa Leverantör', class: 'välj_leverator'%>
+        <%= submit_tag 'Träffa Leverantör', class: 'btn btn-primary btn-sm välj_leverator', id:'välj_leverantör'%>
 
 
         <%end%>
@@ -121,7 +127,7 @@
 
             <%= div_for supplier, :class => "suppliers_price" do %>
 
-            <p> Hyr per timme: <%= supplier.prices.map {|p| p.finance.to_f * @salary_divided_by_hours.to_i}.join("','") %> </p>
+            <p id="price_per_hour"> Hyr per timme: <%= supplier.prices.map {|p| p.finance.to_f * @salary_divided_by_hours.floor}.join("','") %> </p>
 
                 <%= submit_tag 'Träffa Leverantör', class: 'välj_leverator'%>
 
@@ -131,7 +137,7 @@
 
                 <%= div_for supplier, :class => "suppliers_price" do %>
 
-                <p> Hyr per timme: <%= supplier.prices.map {|p| p.call_center.to_f * @salary_divided_by_hours.floor}.join("','") %> </p>
+                <p> Hyr per timme: <%= supplier.prices.map {|p| p.call_center.to_f * @salary_divided_by_hours.round(0)}.join("','") %> </p>
 
                     <%= submit_tag 'Välj Leverantör', class: 'välj_leverator'%>
 
@@ -164,7 +170,6 @@
     </div>
   <%end%>
 <%end%>
-
 
 
 
@@ -203,4 +208,12 @@
       </div>
     </div>
   </div>
+</div>
+
+
+
+<div class="footer_index">
+<p class="footer_index_text">          Digirek AB <br> org.nr: 556976-8269 <br>
+    Gumshornsgatan 7, 114 60 Göteborg
+  </p>
 </div>

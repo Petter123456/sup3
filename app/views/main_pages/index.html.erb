@@ -1,30 +1,18 @@
 
-     <%= link_to "Om Oss", '/om_oss', class:"top_menu" %>
-<div class="header_index">
-  <h1 class="h1_index">
-    Digirek.se
-  </h1>
-  <h2 class="h4_index">
-    Är du trött på sitta i möten med rekrytering & bemannings bolag som inte kan hjälpa dig?
+  <h2 class="h4">
+    Ditt hjälpmedel för att välja rätt bemanning och rekryteringsbolag
   </h2>
-  <p class="intro_text">
-    Digirek.se är en enkel och helt kostnadsfri markandsplats där du kan jämföra rekrytering och bemannings byrårer i din stad och välja de som passar bäst för just dig & ditt nuvarande behov. Precis som du hade bokat en flygresa.
+  <p class="premble last">
+    Digirek.se är en enkel och helt kostnadsfri marknadsplats där du kan se vilka byrårer har rätt nish för just den kompetens du söker, och välja de som passar bäst för just dig & ditt nuvarande behov. Precis som om du hade bokat ett hotell.
   </p>
-  <div id="submit_prod_area_div" >
-    <%= form_tag(page1_path, method: :get) do %>
-      <%= submit_tag 'Starta', :class =>  "submit_prod_area"%>
-    <% end %>
-  </div>
-</div>
 
+  <div id="submit_prod_area_div">
+      <form action="/page1" accept-charset="UTF-8" method="get" id='form_main_page'><input name="utf8" type="hidden" value="✓">
+        <input type="submit" name="commit" value="Starta" class="submit_prod_area, btn btn-primary btn-lg" data-disable-with="Starta">
+  </form>
 
-
-  <div class="byråer">
-  </div>
   <div class="footer_index">
-
-    <p class="footer_index_text">
-      Digirek AB <br> org.nr: 556976-8269 <br>
+  <p class="footer_index_text">          Digirek AB <br> org.nr: 556976-8269 <br>
       Gumshornsgatan 7, 114 60 Göteborg
     </p>
   </div>
