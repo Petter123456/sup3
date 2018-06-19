@@ -335,7 +335,7 @@ function myFunction(e){
 
   if (document.getElementsByID("#reset")[0]) {
     // console.log("hej hej")
-    //document.getElementById("reset").click();
+    document.getElementById("reset").click();
     window.location.reload()
   };
 }
@@ -350,8 +350,7 @@ function notLoggedIn(){
   } else if ($('.petterpetter').text()
 ==="true") {
   alert("Tack för din beställning! Du har nu fått en orderbekräftelse till din mail, och leverantören du valde kommer kontakta dig inom kort")
-  //document.getElementById("reset").click();
-  window.location.reload()
+  document.getElementById("reset").click();
 
 
   }
