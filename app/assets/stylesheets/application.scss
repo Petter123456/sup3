@@ -13,6 +13,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+   *= require animate
    *= require_self
    *= require_tree .
    */
@@ -20,23 +21,54 @@
 
    //Pop up on click of button "select of suppliers"
 
+//   //pulsating Button
+//
+//   @keyframes pulse_animation {
+//     0% { transform: scale(1); }
+//     30% { transform: scale(1); }
+//     40% { transform: scale(1.08); }
+//     50% { transform: scale(1); }
+//     60% { transform: scale(1); }
+//     70% { transform: scale(1.05); }
+//     80% { transform: scale(1); }
+//     100% { transform: scale(1); }
+// }
+//
+// .pulse {
+//     animation-name: pulse_animation;
+//     animation-duration: 3000ms;
+//     transform-origin:70% 70%;
+//     animation-iteration-count: infinite;
+//     animation-timing-function: linear;
+// }
+//
+
+
+
 *{
   font-family:'Vollkorn', serif;
 
 }
 
+#particles{
+  height:100px;
+  background: black;
+}
 
 
    // Small devices (landscape phones, 576px and up)
    @media (min-width: 576px) {
 //FIRST PAGE///////////////////////////////////////////////////////////////
+ul.nav.nav-tabs{
+   border-bottom: none !important;
+}
 
 .navbar{
   float: right;
   width:100%;
   margin-top: 0px;
   background-color: #3192db;
-  height: 115px;
+  height: 60px;
   color: white;
   position: absolute;
   margin-top: 0px;
@@ -46,14 +78,15 @@
 }
 
 .navbar h1{
-  padding-top: 56px;
+  padding-top: 30px;
   padding-left: 30px;
 }
 .nav-tabs li{
   padding-left: 50px;
   font-size: 120%;
-  padding-top: 56px;
+  padding-top: 38px;
 }
+
 
 .h4{
 padding-top:140px;
@@ -248,7 +281,9 @@ background-color: #002071;
 .instruktioner{
 color: black;
 background-color: white;
-padding-top:7%;
+width: 50%;
+padding-top:5%;
+margin-left: 50%;
 padding-bottom: 2%;
 font-size: 120%;
 }

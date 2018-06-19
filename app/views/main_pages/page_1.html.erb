@@ -51,7 +51,7 @@
     <%= text_field_tag :city, params[:city], :placeholder => 'Skriv in stad', class: 'city', :required => true%>
 
     <p class="headers_form">Månadslön:</p>
-    <%= text_field_tag :salary, params[:salary], :placeholder => 'Skriv in månadslön', class: 'salary', readonly: params["salary"] ? true : false%>
+    <%= number_field_tag :salary, params[:salary], :placeholder => 'Skriv in månadslön', class: 'salary', :onchange => 'showSuppliers()'%>
 
   <%= link_to 'Nollställ Sök', :page1 , id: "reset"%>
 

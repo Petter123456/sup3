@@ -187,15 +187,11 @@
     };
 
     //ON CLICK OF SHOW SUPPLIER RESTRICTIONS
-    function showSuppliers(){$('.show').click(function (e){
+    function showSuppliers(){$('#show').click(function (e){
 
       var isValid = true;
       // e.preventDefault(); // preventss default behavior
-      if ($('.salary').val().length < 5) {
-        alert("Lön för den aktuella ställningen är för låg, vänligen öka lönsnivån");
-        isValid = false
-      }
-      else if(Date.parse($('.start_date').val()) > Date.parse($('.end_date').val())){
+       if(Date.parse($('.start_date').val()) > Date.parse($('.end_date').val())){
         alert("start datum kan inte förekomma efter slut datum");
         isValid = false
       }
@@ -240,8 +236,7 @@
         e.preventDefault();
         };
       });
-      window.scrollTo(0,document.body.scrollHeight);
-      
+    //  window.scrollTo(0,document.body.scrollHeight);
     };
     ///// THIS WORKS!!!!THIS WORKS!!!!!!!!
     function choose_Supplier(){$('.välj_leverator').click(function(event){
@@ -285,6 +280,9 @@
       });
     };
 
+  $(document).ready(function(){
+    $(this).scrollTop(0);
+  })
 
 
 $(document).on('ready', function(){
@@ -300,9 +298,9 @@ $(document).on('ready', function(){
 
   $('.percentage').val( localStorage.getItem("savePercentage"));
 
-  $('.start_date').val( localStorage.getItem("saveStartDate"));
+  //$('.start_date').val( localStorage.getItem("saveStartDate"));
 
-  $('.end_date').val( localStorage.getItem("saveEndDate"));
+  //$('.end_date').val( localStorage.getItem("saveEndDate"));
 
   $('.city').val( localStorage.getItem("saveCity"));
 
@@ -316,8 +314,8 @@ function myFunction(e){
   var prodArea = $('#productarea').val()
   var experience = $('.experience').val()
   var percentage = $('.percentage').val()
-  var startdate = $('.start_date').val()
-  var enddate = $('.end_date').val()
+  // var startdate = $('.start_date').val()
+  // var enddate = $('.end_date').val()
   var city = $('.city').val()
   var position = $('.position').val()
 
@@ -326,8 +324,8 @@ function myFunction(e){
   localStorage.setItem("saveProductArea", prodArea);
   localStorage.setItem("saveExperiance", experience);
   localStorage.setItem("savePercentage", percentage);
-  localStorage.setItem("saveStartDate", startdate);
-  localStorage.setItem("saveEndDate", enddate);
+  // localStorage.setItem("saveStartDate", startdate);
+  // localStorage.setItem("saveEndDate", enddate);
   localStorage.setItem("saveCity", city);
   localStorage.setItem("savePosition", position);
 
@@ -335,7 +333,7 @@ function myFunction(e){
 
 
 
-  if (document.getElementsByClassName("supplier_div")[0]) {
+  if (document.getElementsByID("#reset")[0]) {
     // console.log("hej hej")
     //document.getElementById("reset").click();
     window.location.reload()
@@ -352,7 +350,8 @@ function notLoggedIn(){
   } else if ($('.petterpetter').text()
 ==="true") {
   alert("Tack för din beställning! Du har nu fått en orderbekräftelse till din mail, och leverantören du valde kommer kontakta dig inom kort")
-  document.getElementById("reset").click();
+  //document.getElementById("reset").click();
+  window.location.reload()
 
 
   }
