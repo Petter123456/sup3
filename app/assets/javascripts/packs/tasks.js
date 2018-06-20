@@ -275,7 +275,9 @@
             type: "GET",
             url: "/confirm_order_and_email",
             data: {contracts: { productarea: productarea, position: position, start_date: start_date, end_date: end_date, city: city, percentage: percentage, experience: experience, salary: salary, supplier_name: supplier_name, supplier_id: supplier_id, supplier_price: supplier_price, productarea: productarea, type_of_service: type_of_service}}
+
           });
+          window.location.reload();
         });
       });
     };
