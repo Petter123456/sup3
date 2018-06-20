@@ -358,6 +358,8 @@ font-size: 120%;
 .suppliers_name{
   padding-right: 20px;
   font-weight: bold;
+  text-align: center;
+  width: 100%;
 }
 .suppliers_description{
   width:400px;
@@ -372,23 +374,23 @@ font-size: 120%;
 }
 
      #supplier_1{
-
        display:inline-block;
        font-size: 100%;
        color:black;
        border:none;
-
+       width: 100%;
      }
      #supplier_1 p{
        display: inline-block;
      }
 
      #supplier_2{
-
        display: inline-block;
        font-size: 100%;
        color:black;
-
+     }
+     #supplier_2.supplier.supplier_name{
+       width: 100%;
      }
      #supplier_2 p{
        display: inline-block;
