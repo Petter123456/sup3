@@ -45,7 +45,7 @@
 
 
 .first{
-  background: red;
+  background: yellow;
 }
 .second{
   background: blue;
@@ -121,10 +121,19 @@ text-align: center;
   padding-top: 40px;
 }
 .btn{
-  height: 200px;
-  width: 400px;
-  font-size: 400%;
-     }
+  font-size: 180%;
+}
+#show{
+  height: 100px !important;
+  width: 200px !important;
+  margin-left: 55%;
+  margin-top: -110%;
+}
+
+#reset{
+color: red;
+width:100px;
+}
 
     .footer_index{
       background-color: #3192db;
@@ -282,6 +291,10 @@ background-color: #002071;
 ////////JÄMFÖR LEVERANTÖRER//////////////
 ////////////////////////////////////////
 ////////////////////////////////////////
+
+.col-sm{
+  margin-top: 7%;
+}
 .wrapper_main_page1{
   text-align: left;
   }
@@ -313,9 +326,6 @@ font-size: 120%;
     display: inline-block;
     font-size: 120%;
     color: black;
-    width: 35%;
-    margin-left: 50px;
-    // border: 0.5px solid;
 
   }
   #main_form div{
@@ -335,7 +345,6 @@ font-size: 120%;
   }
 
 .percentage, .productarea, .experience, .position, .start_date, .end_date, .city, .salary{
-//   border: solid white;
   width: 240px;
   font-size: 90%;
 }
@@ -345,53 +354,6 @@ font-size: 120%;
   background-color:#3192db;
 
 }
-#show{
-  height: 200px !important;
-  width: 500px !important;
-  margin-left: 30%;
-  margin-top: -42%;
-}
-
-  #reset{
-  color: red;
-  width:100px;
-  }
-
-  table{
-
-       font-size: 180%;
-       color:white;
-      border-bottom: solid;
-      margin-bottom: 10px;
-      margin-top: 50px;
-      margin-left: 5%;
-     }
-
-  .table_head{
-    border-collapse: separate;
-        border-spacing: 60px;
-        margin-left: 5%;
-
-  }
-
-
-  #table_head_lever{
-        position: relative;
-       padding-right: 90px;
-        color:black;
-     }
-     #table_head_stad{
-       padding-right: 100px;
-       color:black;
-
-     }
-     #table_head_rek{
-       padding-right: 30px;
-       color:black;
-     }
-     #table_head_hyr{
-       color:black;
-     }
 
 .suppliers_name{
   padding-right: 20px;
@@ -404,13 +366,9 @@ font-size: 120%;
 #rek_pris{
   padding-right: 20px;
 }
-.suppliers_price p{
-  padding-right: 20px;
-}
-
 
 .supplier_div{
-  margin-left: 5%;
+  border:solid;
 }
 
      #supplier_1{
@@ -439,14 +397,12 @@ font-size: 120%;
   .välj_leverator{
   background-color: #3192db;
     color:#fff;
+    width: 100%;
  }
 
 input.välj_leverator:hover {
  background-color: darkblue;
  }
-.suppliers_recruitment_price{
-  padding-left: 20px;
-}
 
 ////////////////////END OF JÄMFÖR LEV//////////
 /////////////////////////////////
@@ -571,12 +527,12 @@ background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
      //////////////
      //////////////
 
-     .submit_prod_area{
-       font-size: 300%;
-       margin-top: 150px;
-       height:300px;
-       width: 300px;
-      }
+     // .submit_prod_area{
+     //   font-size: 200%;
+     //   margin-top: 150px;
+     //   height:200px;
+     //   width: 200px;
+     //  }
       .h4_index{
         font-size: 200%;
       }
@@ -626,15 +582,3 @@ background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
         font-size: 120%;
       }
    }
-
-   // Large devices (desktops, 992px and up)
-   @media (min-width: 992px) {
-     .submit_prod_area{
-       font-size: 500%;
-     }
-
-    }
-
-   // Extra large devices (large desktops, 1200px and up)
-   @media (min-width: 1200px) {
-    }
