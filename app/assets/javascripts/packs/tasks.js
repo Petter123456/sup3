@@ -228,9 +228,7 @@
         isValid = false
       }
       else {
-
         isValid = true
-
       };
       if (!isValid) {
         e.preventDefault();
@@ -282,12 +280,24 @@
       });
     };
 
-  $(document).ready(function(){
-    $(this).scrollTop(0);
 
-    console.log("hejhe");
-    alert("Du fyller i fälten nedan så att det matchar ditt nuvarande behov. Digirek kommer att ge dig råd om du råkar skriva in något felaktigt exempelvis för låg ställningsprocent om du söker en väldigt erfaren person. Sedan klickar du bara på knappen till höger för att se leverantörer som kan hjälpa dig."  + " Om du väljer en byrå och vill beställa måste du först logga in eller skapa ett konto (det tar 30 sekunder)");
-  })
+$(document).ready(function(){
+
+  $(this).scrollTop(0);
+
+  if (window.location.href.match('/page1')) {
+
+
+    var alerted = localStorage.getItem('alerted') || '';
+    if (alerted != 'yes') {
+    console.log('hejhej');
+    alert('Så här gör du: Du fyller i fälten nedan så att det matchar ditt nuvarande behov. Digirek kommer att ge dig råd om du råkar skriva in något felaktigt exempelvis för låg ställningsprocent om du söker en väldigt erfaren person. Sedan klickar du bara på knappen till höger för att se leverantörer som kan hjälpa dig. TIPS: Om du väljer en byrå och vill beställa måste du först logga in eller skapa ett konto (det tar 30 sekunder)');
+    localStorage.setItem('alerted','yes');
+    }
+
+  }
+
+});
 
 
 $(document).on('ready', function(){
@@ -316,35 +326,25 @@ $('.position').val( localStorage.getItem("savePosition"));
 
 function myFunction(e){
 
-  var prodArea = $('#productarea').val()
-  var experience = $('.experience').val()
-  var percentage = $('.percentage').val()
-  // var startdate = $('.start_date').val()
+  // var prodArea = $('#productarea').val()
+  // var experience = $('.experience').val()
+  // var percentage = $('.percentage').val()
+  // var startdate = Date.now();
   // var enddate = $('.end_date').val()
-  var city = $('.city').val()
-  var position = $('.position').val()
-
-
-
-  localStorage.setItem("saveProductArea", prodArea);
-  localStorage.setItem("saveExperiance", experience);
-  localStorage.setItem("savePercentage", percentage);
-  // localStorage.setItem("saveStartDate", startdate);
-  // localStorage.setItem("saveEndDate", enddate);
-  localStorage.setItem("saveCity", city);
-  localStorage.setItem("savePosition", position);
-
-  //document.getElementById("main_form").submit();
-
-
-
-  if (document.getElementsByID("#reset")[0]) {
-    // console.log("hej hej")
-    document.getElementById("reset").click();
-    window.location.reload()
-  };
+  // var city = $('.city').val()
+  // var position = $('.position').val()
+  //
+  //
+  //
+  // localStorage.setItem("saveProductArea", prodArea);
+  // localStorage.setItem("saveExperiance", experience);
+  // localStorage.setItem("savePercentage", percentage);
+  // // localStorage.setItem("saveStartDate", startdate);
+  // // localStorage.setItem("saveEndDate", enddate);
+  // localStorage.setItem("saveCity", city);
+  // localStorage.setItem("savePosition", position);
+  // //document.getElementById("main_form").submit();
 }
-
 
 
 function notLoggedIn(){
@@ -355,11 +355,8 @@ function notLoggedIn(){
   } else if ($('.petterpetter').text()
 ==="true") {
   alert("Tack för din beställning! Du har nu fått en orderbekräftelse till din mail, och leverantören du valde kommer kontakta dig inom kort")
-  document.getElementById("reset").click();
-
-
+  location.reload(true);
   }
-
 }
 
 

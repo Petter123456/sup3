@@ -1,7 +1,7 @@
 <p style="display: none;" class="petterpetter" id="petterpetter"><%= session[:user_id] ? 'true' : 'false'%></p>
 
 <div class="container">
-  <div class="row">
+  <div class="row bootstrap_grid">
     <div class="col-sm first">
       <%= form_tag '/page1', method: :get , :id => 'main_form' do %>
       <p class="headers_form">Arbetsområde</p>
@@ -44,13 +44,22 @@
       <p class="headers_form">Månadslön:</p>
       <%= number_field_tag :salary, params[:salary], :placeholder => 'Skriv in månadslön', class: 'salary', :onchange => 'showSuppliers()'%>
 
-      <button class="submit_prod_area, btn btn-primary btn-lg" id="show">Sök Byråer
-      </button>
 
-      <%= link_to 'Nollställ Sök', :page1 , id: "reset"%>
+        <button class="submit_prod_area, btn btn-primary btn-lg" id="show">Sök Byråer
+        </button>
+
+
+
 
     </div>
+
+
+
+
+
+
     <div class="col-sm second">
+
       <!-- Get right supplier deepending in city and product area -->
       <% if @suppliers.present? %>
         <div class="wrapper">
@@ -144,23 +153,20 @@
     <%= submit_tag 'Träffa Leverantör', class: 'välj_leverator'%>
 
   </div>
-<%end%>
-</div>
-<%end%>
+
 <%end%>
 
 </div>
+
+
+
+<%end%>
+
+<%end%>
+</div>
 </div>
 </div>
 
-<div class="instruktioner">
-
-<h1>Så här gör du</h1>
-<p>Du fyller i fälten nedan så att det matchar ditt nuvarande behov. Digirek kommer att ge dig råd om du råkar skriva in något felaktigt exempelvis för låg ställningsprocent om du söker en väldigt erfaren person. Sedan klickar du bara på knappen till
-höger för att se leverantörer som kan hjälpa dig.</p>
-
-<p>Tips: Om du väljer en byrå och vill beställa måste du först logga in eller skapa ett konto (det tar 30 sekunder)</p>
-</div>
 
 <!-- Button trigger modal -->
 <button type="button" hidden="hidden" class="btn btn-primary test" data-toggle="modal" data-target="#exampleModal">
@@ -194,6 +200,9 @@ Launch demo modal
 </div>
 </div>
 </div>
+
+
+
 
 <div class="footer_index">
 <p class="footer_index_text">
