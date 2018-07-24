@@ -254,9 +254,8 @@
 
           var supplier = event.target.closest('.supplier_div');
           var supplier_name = supplier.children[0].childNodes[1].textContent;
-
           var supplier_id = supplier.children[3].childNodes[1].textContent;
-          var supplier_price = supplier.children[4].childNodes[1].textContent;
+          var supplier_price = supplier.children[3].childNodes[1].textContent;
           var supplier_recruitment = supplier.children[2].childNodes[1].textContent;
 
 
