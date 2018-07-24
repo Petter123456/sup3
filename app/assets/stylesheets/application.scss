@@ -33,11 +33,13 @@ background-size:cover;
 }
 
 
-.first{
-  border: solid;
-}
+
 .second{
-  border: solid;
+  /* border: solid; */
+  position: fixed;
+  width: 50%;
+  margin-left: 30%;
+  padding-top: 60px;
 }
 
 
@@ -117,6 +119,7 @@ padding-top: 38px;
 #show{
   width: 100%;
   height: 10%;
+  font-size: 200%;
 }
 
 #reset{
@@ -321,6 +324,18 @@ background-color: #002071;
 ////////////////////////////////////////
 ////////////////////////////////////////
 
+
+.image_background2{
+
+background:image-url('background2.jpg');
+width: 100%;
+height: 800px;
+background-repeat:no-repeat;
+background-size:cover;
+
+}
+
+
 .bootstrap_grid{
   padding-top: 5%;
 }
@@ -357,8 +372,9 @@ background-color: #002071;
 
   #main_form{
     display: inline-block;
-    font-size: 120%;
-    color: black;
+font-size: 120%;
+color: white;
+padding-top: 60px
 
   }
   #main_form div{
@@ -383,8 +399,8 @@ background-color: #002071;
 }
 
 #start_date, #end_date, #city, #position, #salary, .productarea, .percentage, .experience{
-  color:white;
-  background-color:#3192db;
+  color:black;
+  background-color: white;
 
 }
 
@@ -396,22 +412,32 @@ background-color: #002071;
 }
 .suppliers_description{
   width:400px;
+  text-align: center;
 }
 
+
 #rek_pris{
-  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.suppliers_price{
+  padding-left: 20px;
 }
 
 .supplier_div{
-  border:solid;
+  border:solid white;
+  margin-bottom: 10px;
 }
 
      #supplier_1{
        display:inline-block;
        font-size: 100%;
-       color:black;
+       color:white;
        border:none;
        width: 100%;
+       margin-bottom: -10px;
+
+
      }
      #supplier_1 p{
        display: inline-block;
@@ -420,7 +446,11 @@ background-color: #002071;
      #supplier_2{
        display: inline-block;
        font-size: 100%;
-       color:black;
+       color:white;
+       width: 100%;
+       margin-bottom: -10px;
+
+
      }
      #supplier_2.supplier.supplier_name{
        width: 100%;
@@ -430,7 +460,7 @@ background-color: #002071;
      }
 
   .välj_leverator{
-  background-color: #3192db;
+  background-color: #007bff;
     color:#fff;
     width: 100%;
  }

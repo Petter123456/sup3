@@ -317,33 +317,36 @@ $(document).on('ready', function(){
 
   //$('.end_date').val( localStorage.getItem("saveEndDate"));
 
-  $('.city').val( localStorage.getItem("saveCity"));
 
-$('.position').val( localStorage.getItem("savePosition"));
+//$('.position').val( localStorage.getItem("savePosition"));
+
+//$('.city').val( localStorage.getItem("saveCity"));
+
 });
 
 
 
 function myFunction(e){
 
-  // var prodArea = $('#productarea').val()
-  // var experience = $('.experience').val()
-  // var percentage = $('.percentage').val()
-  // var startdate = Date.now();
-  // var enddate = $('.end_date').val()
-  // var city = $('.city').val()
-  // var position = $('.position').val()
-  //
+  var prodArea = $('#productarea').val();
+  var experience = $('.experience').val();
+  var percentage = $('.percentage').val();
+  var startdate = Date.now();
+  var enddate = $('.end_date').val();
+  var position = $('.position').val();
+  var city = $('.city').val();
+
   //
   //
   // localStorage.setItem("saveProductArea", prodArea);
   // localStorage.setItem("saveExperiance", experience);
   // localStorage.setItem("savePercentage", percentage);
-  // // localStorage.setItem("saveStartDate", startdate);
-  // // localStorage.setItem("saveEndDate", enddate);
-  // localStorage.setItem("saveCity", city);
+  // localStorage.setItem("saveStartDate", startdate);
+  // localStorage.setItem("saveEndDate", enddate);
   // localStorage.setItem("savePosition", position);
-  // //document.getElementById("main_form").submit();
+  // localStorage.setItem('saveCity', city);
+
+    //document.getElementById("main_form").submit();
 }
 
 
