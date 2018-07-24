@@ -232,6 +232,7 @@
       };
       if (!isValid) {
         e.preventDefault();
+
         };
       });
     //  window.scrollTo(0,document.body.scrollHeight);

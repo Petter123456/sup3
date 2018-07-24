@@ -25,6 +25,7 @@ class MainPagesController < ApplicationController
     if params[:city].present?
       @suppliers = Supplier.where('city like ?',"%#{params[:city]}%")
     end
+
     #Product area gets different prices
     @assitance = params[:assitance].downcase rescue nil
 
