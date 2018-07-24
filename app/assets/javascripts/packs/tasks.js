@@ -284,18 +284,44 @@ $(document).ready(function(){
 
   $(this).scrollTop(0);
 
+  // Instruction Alert
   if (window.location.href.match('/page1')) {
+      if ($('#city').val() === "") {
 
+    var currentCallback;
 
-    var alerted = localStorage.getItem('alerted') || '';
-    if (alerted != 'yes') {
-    console.log('hejhej');
-    alert('Så här gör du: Du fyller i fälten nedan så att det matchar ditt nuvarande behov. Digirek kommer att ge dig råd om du råkar skriva in något felaktigt exempelvis för låg ställningsprocent om du söker en väldigt erfaren person. Sedan klickar du bara på knappen till höger för att se leverantörer som kan hjälpa dig. TIPS: Om du väljer en byrå och vill beställa måste du först logga in eller skapa ett konto (det tar 30 sekunder)');
-    localStorage.setItem('alerted','yes');
+    // override default browser alert
+    window.alert = function(msg, callback){
+      $('.message').text(msg);
+      $('.customAlert').css('animation', 'fadeIn 0.3s linear');
+      $('.customAlert').css('display', 'inline');
+      setTimeout(function(){
+        $('.customAlert').css('animation', 'none');
+      }, 300);
+      currentCallback = callback;
     }
 
-  }
+    $(function(){
 
+      // add listener for when our confirmation button is clicked
+    	$('.confirmButton').click(function(){
+        $('.customAlert').css('animation', 'fadeOut 0.3s linear');
+        setTimeout(function(){
+         $('.customAlert').css('animation', 'none');
+    		$('.customAlert').css('display', 'none');
+        }, 300);
+        currentCallback();
+      })
+
+      // our custom alert box
+      setTimeout(function(){
+        alert('Fyll i fälten till vänster så att det matchar ditt nuvarande behov. Digirek kommer att ge dig råd om du råkar skriva in något felaktigt, exempelvis för låg ställningsprocent om du söker en väldigt erfaren person. Sedan klickar du bara på knappen "Sök Byråer" så ser du vilka leverantörer som kan hjälpa dig. Om du väljer en byrå och vill träffa dem måste du först logga in eller skapa ett konto (det tar 30 sekunder)', function(){
+            console.log("Callback executed");
+          });
+      }, 500);
+    });
+    }
+  }
 });
 
 
