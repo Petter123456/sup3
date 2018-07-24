@@ -254,7 +254,7 @@
 
           var supplier = event.target.closest('.supplier_div');
           var supplier_name = supplier.children[0].childNodes[1].textContent;
-          var supplier_id = supplier.children[3].childNodes[1].textContent;
+          var supplier_id = supplier.children[4].childNodes[1].textContent;
           var supplier_price = supplier.children[3].childNodes[1].textContent;
           var supplier_recruitment = supplier.children[2].childNodes[1].textContent;
 
@@ -357,7 +357,7 @@ function notLoggedIn(){
   } else if ($('.petterpetter').text()
 ==="true") {
   alert("Tack för din beställning! Du har nu fått en orderbekräftelse till din mail, och leverantören du valde kommer kontakta dig inom kort")
-  location.reload(true);
+  document.getElementById("hitta_lev").click();
   }
 }
 
