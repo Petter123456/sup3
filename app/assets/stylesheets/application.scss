@@ -545,6 +545,112 @@ input.välj_leverator:hover {
   }
 }
 
+/////////////////////////////// END OF INSTRUCTION ALERT
+/////////////////////////////// END OF INSTRUCTION ALERT
+/////////////////////////////// END OF INSTRUCTION ALERT
+/////////////////////////////// END OF INSTRUCTION ALERT
+
+.flash{
+  color: white;
+  font-size: 200%;
+  text-align: justify;
+  line-height: 1.6;
+
+}
+
+
+/////////////////////////////// INSTRUCTION ALERT NO SUPPLIER
+/////////////////////////////// INSTRUCTION ALERT NO SUPPLIER
+/////////////////////////////// INSTRUCTION ALERT NO SUPPLIER
+/////////////////////////////// INSTRUCTION ALERT NO SUPPLIER
+ .customAlert2{
+
+  display: none;
+  position: fixed;
+  max-width: 25%;
+  min-width: 550px !important;
+  min-height: 50%;
+  height: 200px;
+  left: 50%;
+  top: 30%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-left: -12.5%;
+  margin-top: -5.2%;
+  background: #088A68;
+
+  @media all and (max-width: 1300px){
+    .message2{
+      font-size: 34px !important;
+    }
+    input[type='button']{
+      height: 15% !important;
+    }
+  }
+
+  .message2{
+    padding: 5px;
+    color: white;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: justify;
+  }
+
+  input[type='button']{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 50%;
+    height: 36px;
+    margin-top: -45px;
+    margin-left: -25%;
+    outline: 0;
+    border: 0;
+    background: #04B486;
+    color: white;
+    &:hover{
+      transition: 0.3s;
+      cursor: pointer;
+    	background: lighten(#04B486, 5%);
+    }
+  }
+}
+
+
+@keyframes fadeOut{
+	from{
+  	opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn{
+	from{
+  	opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+/////////////////////////////// END OF INSTRUCTION ALERT NO SUPPLIER ///////////////////////////////
+/////////////////////////////// END OF INSTRUCTION ALERT NO SUPPLIER ///////////////////////////////
+/////////////////////////////// END OF INSTRUCTION ALERT NO SUPPLIER ///////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////END OF JÄMFÖR LEV//////////
 /////////////////////////////////
 /////////////////////////)///////////

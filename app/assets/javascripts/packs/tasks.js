@@ -232,7 +232,6 @@
       };
       if (!isValid) {
         e.preventDefault();
-
         };
       });
     //  window.scrollTo(0,document.body.scrollHeight);
@@ -284,6 +283,58 @@
 $(document).ready(function(){
 
   $(this).scrollTop(0);
+
+  if (window.location.href.match('/page1?')){
+    if ($('.supplier_div').length === 0 && $('.city').length !== 0) {
+      console.log("hej hej")
+
+
+
+
+      var currentCallback;
+
+      // override default browser alert
+      window.alert = function(msg, callback){
+        $('.message2').text(msg);
+        $('.customAlert2').css('animation', 'fadeIn 0.3s linear');
+        $('.customAlert2').css('display', 'inline');
+        setTimeout(function(){
+          $('.customAlert2').css('animation', 'none');
+        }, 300);
+        currentCallback = callback;
+      }
+
+      $(function(){
+
+        // add listener for when our confirmation button is clicked
+        $('.confirmButton2').click(function(){
+          $('.customAlert2').css('animation', 'fadeOut 0.3s linear');
+          setTimeout(function(){
+           $('.customAlert2').css('animation', 'none');
+          $('.customAlert2').css('display', 'none');
+          }, 300);
+          currentCallback();
+        })
+
+        // our custom alert box
+        setTimeout(function(){
+          alert('hej hej', function(){
+              console.log("Callback executed");
+            });
+        }, 500);
+      });
+
+
+
+
+
+
+
+
+
+
+    }
+  }
 
   // Instruction Alert
   if (window.location.href.match('/page1')) {
