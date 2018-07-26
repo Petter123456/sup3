@@ -13,16 +13,16 @@
               <%= link_to "Hem", '/main_page', id: "mainpage" %>
             </li>
             <li role="presentation">
-              <%= link_to "Hitta leverantörer", '/page1', id: "hitta_lev" %>
+              <%= link_to "Hitta leverantörer", '/page1', id: "mainpage" %>
             </li>
             <li role="presentation" class="active">
               <%= link_to "Om Oss", '/om_oss', class:"top_menu" %>
             </li>
             <li role="presentation" class="active">
               <% if current_user %>
-              Welcome <%= current_user.name %> | <%= link_to "logout", '/logout' %>
+              Välkommen <%= current_user.name %> | <%= link_to "Logga ut", '/logout' %>
               <% else %>
-              <%= link_to "Login", '/login', id: "login" %> | <%= link_to "Sign-up", '/signup', id:"signup"%>  <%#= link_to "Jämför Leverantörer", '/page1', id:"jämför" %>
+              <%= link_to "Logga in", '/login', id: "login" %> | <%= link_to "Registrera konto", '/signup', id:"signup"%>  <%#= link_to "Jämför Leverantörer", '/page1', id:"jämför" %>
               <% end %>
             </li>
           </ul>
@@ -32,11 +32,12 @@
 
 
 
+
 <div class="container">
   <div class="row bootstrap_grid">
     <div class="col-sm first">
       <%= form_tag '/page1', method: :get , :id => 'main_form' do %>
-      <p class="headers_form">Arbetsområde</p>
+      <p class="headers_form">Arbetsområde:</p>
       <select class="productarea" name="assitance" id="productarea" onchange="myFunction(event)">
         <% @product_areas.each do |productarea| %>
           <option class="opts" id="opts">
