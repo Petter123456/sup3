@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+default_url_options :host => "localhost:3000"
+
+
 root 'main_pages#index'
 
 get 'main_page' => 'main_pages#index'
@@ -20,4 +23,7 @@ post '/confirm_order_and_email' => 'main_pages#confirm_order_and_email'
 get '/confirm_order_and_email' => 'main_pages#confirm_order_and_email'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :password_resets
+
 end
