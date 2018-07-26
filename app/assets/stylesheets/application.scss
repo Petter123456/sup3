@@ -51,8 +51,6 @@ background-size:cover;
 }
 
 
-   // Small devices (landscape phones, 576px and up)
-   @media (min-width: 576px) {
 //FIRST PAGE///////////////////////////////////////////////////////////////
 ul.nav.nav-tabs{
    border-bottom: none !important;
@@ -127,6 +125,7 @@ text-shadow: 2px 2px 5px black;
   width: 100%;
   height: 10%;
   font-size: 200%;
+  margin-bottom: 20px;
 }
 
 #reset{
@@ -337,7 +336,7 @@ background-color: #002071;
 
 background:image-url('background2.jpg');
 width: 100%;
-height: 800px;
+height: 100%;
 background-repeat:no-repeat;
 background-size:cover;
 
@@ -380,7 +379,7 @@ background-size:cover;
 
   #main_form{
     display: inline-block;
-font-size: 100%;
+font-size: 110%;
 color: white;
 padding-top: 60px
 
@@ -720,7 +719,7 @@ background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
   padding-left: 20px;
   padding-right: 20px;
   }
-}
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
