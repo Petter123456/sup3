@@ -18,18 +18,20 @@
    *= require_tree .
    */
 
+*{
+  font-family: Montserrat sans-serif;;
+}
+
 .col-sm{
   margin-top: 1.5% !important;
 }
 
 .image_background{
-
 background:image-url('background.jpg');
 width: 100%;
 height: 800px;
 background-repeat:no-repeat;
 background-size:cover;
-
 }
 
 
@@ -294,9 +296,10 @@ background-color: #002071;
   }
   .signup_form div p {
     text-align: left;
-    margin-left: 338px;
+    margin-left: 246px;
     margin-top: 10px;
     color: white;
+    width: 200px;
   }
   .signup_submit_registration{
     border: solid;
@@ -654,18 +657,6 @@ input.välj_leverator:hover {
 /////////////////////////////// END OF INSTRUCTION ALERT NO SUPPLIER ///////////////////////////////
 /////////////////////////////// END OF INSTRUCTION ALERT NO SUPPLIER ///////////////////////////////
 
-
-
-
-
-
-
-
-
-
-
-
-
 ////////////////////END OF JÄMFÖR LEV//////////
 /////////////////////////////////
 /////////////////////////)///////////
@@ -845,3 +836,57 @@ background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
         font-size: 120%;
       }
    }
+
+
+
+/////////////////////////Om oss///////////
+/////////////////////////Om oss///////////
+/////////////////////////Om oss///////////
+
+// Bakgrunden gäller även för login & registration
+.image_background_om_oss{
+
+background:image-url('background2.jpg');
+width: 100%;
+height: 100%;
+background-repeat:no-repeat;
+background-size:cover;
+
+}
+
+.forklaring{
+  margin: 0 auto;
+  margin-left: 7%;
+  padding-top: 10%;
+  color: white;
+  text-align: justify;
+  width: 65%;
+  line-height: 1.6;
+
+}
+.slogan{
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 120%;
+  line-height: 1.6;
+
+}
+.forklaring p{
+  margin-left: 20px;
+  line-height: 200%;
+  text-shadow: 1px 1px 5px black;
+  font-size: 120%;
+
+}
+.forklaring h1{
+  margin-left: 20px;
+  line-height: 200%;
+  text-shadow: 1px 1px 5px black;
+}
+.forklaring li {
+  margin-left: 20px;
+  line-height: 200%;
+  text-shadow: 1px 1px 5px black;
+  font-size: 120%;
+
+}
