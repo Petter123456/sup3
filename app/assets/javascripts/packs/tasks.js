@@ -248,6 +248,7 @@
           var percentage = $(".percentage").val()
           var experience = $(".experience").val()
           var salary = $("#salary").val()
+          var antal = $("#antal").val()
 
           // var supplier = $('.supplier_table').closest('supplier_div');
 
@@ -261,7 +262,7 @@
 
           var type_of_service = $('.rent_or_recruit').val()
 
-        var string =  "<p id='productarea'> Område: " + productarea +"</p>" + "<p id='position'> Tjänst: " + position +"</p>" + "<p id='start_date'> Start datum: " + start_date + "</p>" + "<p id='end_date'> Slut Datum: " + end_date + "</p>" + "<p id='city'> Stad: " + city + "</p>" + "<p id='percentage'> Ställningsprocent: " + percentage + "</p>" + "<p id='city'> Erfarenhet: " + experience + "</p>" +  "<p id='supplier_price'>" + supplier_price +"</p>"+ "<p id='supplier_recruitment'>" + supplier_recruitment +"</p>" + "<p id='supplier_name'> Leverantör: " + supplier_name + "</p>"+ "<p hidden id='supplier_id'>" + parseInt(supplier_id); + "</p>"+ "<p id='supplier_price'>" + supplier_price + "</p>";
+        var string =  "<p id='productarea'> Område: " + productarea +"</p>" + "<p id='position'> Tjänst: " + position +"</p>" + "<p id='antal'> Antal: " + antal + "</p>" + "<p id='start_date'> Start datum: " + start_date + "</p>" + "<p id='end_date'> Slut Datum: " + end_date + "</p>" + "<p id='city'> Stad: " + city + "</p>" + "<p id='percentage'> Ställningsprocent: " + percentage + "</p>" + "<p id='city'> Erfarenhet: " + experience + "</p>" +  "<p id='supplier_price'>" + supplier_price +"</p>"+ "<p id='supplier_recruitment'>" + supplier_recruitment +"</p>" + "<p id='supplier_name'> Leverantör: " + supplier_name + "</p>"+ "<p hidden id='supplier_id'>" + parseInt(supplier_id); + "</p>"+ "<p id='supplier_price'>" + supplier_price + "</p>";
 
         $('.modal-body').html(string);
         event.preventDefault();
@@ -286,7 +287,7 @@ $(document).ready(function(){
 
   if (window.location.href.match('/page1?')){
     if ($('.supplier_div').length === 0 && $('.city').length !== 0) {
-      console.log("hej hej")
+      console.log("Tyvärr har vi inga aktiva leverantörer i den stad du har önskat hjälp i. Skriv ett mail till oss så skall vi se till att hjälpa dig ändå, samt se till att vi i framtiden kommer vara aktiva i er stad")
 
 
 
@@ -318,7 +319,7 @@ $(document).ready(function(){
 
         // our custom alert box
         setTimeout(function(){
-          alert('hej hej', function(){
+          alert('Tyvärr har vi inga aktiva leverantörer i den stad som du har sökt på. Vänligen skriv ett mail till oss så skall vi se till att hjälpa dig ändå, samt se till att vi i framtiden kommer vara aktiva i din stad.', function(){
               console.log("Callback executed");
             });
         }, 500);
@@ -415,9 +416,9 @@ function myFunction(e){
 
   //
   //
-  // localStorage.setItem("saveProductArea", prodArea);
-  // localStorage.setItem("saveExperiance", experience);
-  // localStorage.setItem("savePercentage", percentage);
+   localStorage.setItem("saveProductArea", prodArea);
+   localStorage.setItem("saveExperiance", experience);
+   localStorage.setItem("savePercentage", percentage);
   // localStorage.setItem("saveStartDate", startdate);
   // localStorage.setItem("saveEndDate", enddate);
   // localStorage.setItem("savePosition", position);
@@ -427,16 +428,20 @@ function myFunction(e){
 }
 
 
+
+
 function notLoggedIn(){
-  if ($('.petterpetter').text()
- === "false"){
-    alert("Vänligen logga in för att göra en beställning");
-    document.getElementById("login").click();
-  } else if ($('.petterpetter').text()
-==="true") {
-  alert("Tack för din beställning! Du har nu fått en orderbekräftelse till din mail, och leverantören du valde kommer kontakta dig inom kort")
-  document.getElementById("hitta_lev").click();
-  }
+
+    if ($('.petterpetter').text()
+   === "false"){
+      alert("Vänligen logga in för att göra en beställning");
+      document.getElementById("login").click();
+    } else if ($('.petterpetter').text()
+  ==="true") {
+    alert("Tack för din beställning! Du har nu fått en orderbekräftelse till din mail, och leverantören du valde kommer kontakta dig inom kort")
+    document.getElementById("hitta_lev").click();
+    }
+
 }
 
 

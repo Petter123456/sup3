@@ -31,8 +31,9 @@ class MainPagesController < ApplicationController
 
 
 
-    @salary_divided_by_hours = params[:salary].to_f / 162.5
-    @salary_multiplied_by_months = params[:salary].to_f * 12.floor
+    @salary_divided_by_hours = params[:salary].to_f / 160
+    @salary_multiplied_by_months = params[:salary].to_f * 12.ceil
+
 
   end
 

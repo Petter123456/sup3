@@ -49,6 +49,9 @@
 
       <%= text_field_tag :position, params[:position], :placeholder => 'Ex: systemutvecklare', class: 'position', :required => true%>
 
+      <p class="headers_form">Antal Personer:</p>
+      <%= number_field_tag :antal, params[:antal], :placeholder => '1', class: 'antal', :onchange => 'showSuppliers()', :required => true%>
+
       <p class="headers_form">Ställningsprocent:</p>
       <select class="percentage" onchange="myFunction(event)">
         <% @position_percentage.each do |percentage| %>
@@ -98,7 +101,7 @@
 
         <%= div_for supplier, :class => "suppliers_recruitment_price", :id => "suppliers_recruitment_price" do %>
           <p id="rek_pris">
-            Rekrytera:<%= supplier.recruitment_percentage.to_i.floor * @salary_multiplied_by_months.floor / 100%>kr</p>
+            Rekrytera: <%= supplier.recruitment_percentage.to_i.floor * @salary_multiplied_by_months.floor / 100%> kr</p>
         <%end%>
 
         <!-- <%= div_for supplier, :class => "suppliers_id" do %>
@@ -108,44 +111,44 @@
         <% if @assitance == "it" %>
           <%= div_for supplier, :class => "suppliers_price" do %>
               <p>Hyr per timme:
-                <%= supplier.prices.map {|p| p.it.to_f * @salary_divided_by_hours.to_i}.join("','") %>kr
+                <%= supplier.prices.map {|p| p.it.to_f * @salary_divided_by_hours.to_f}.join("','") %> kr
               </p>
           <%end%>
 
           <% elsif @assitance == "marknadsföring" %>
             <%= div_for supplier, :class => "suppliers_price" do %>
                 <p>
-                  Hyr per timme:<%= supplier.prices.map {|p| p.marketing.to_f * @salary_divided_by_hours.round(0)}.join("','") %>
-                </p>
+                  Hyr per timme: <%= supplier.prices.map {|p| p.marketing.to_f * @salary_divided_by_hours.to_f}.join("','") %>
+                 kr </p>
           <%end%>
 
           <% elsif @assitance == "finans/ekonomi" %>
             <%= div_for supplier, :class => "suppliers_price" do %>
               <p id="price_per_hour">
                 Hyr per timme:
-                <%= supplier.prices.map {|p| p.finance.to_f * @salary_divided_by_hours.floor}.join("','") %>
-              </p>
+                <%= supplier.prices.map {|p| p.finance.to_f * @salary_divided_by_hours.to_f}.join("','") %>
+               kr</p>
           <%end%>
 
           <% elsif @assitance == "kundtjänst" %>
             <%= div_for supplier, :class => "suppliers_price" do %>
               <p>
-                Hyr per timme: <%= supplier.prices.map {|p| p.call_center.to_f * @salary_divided_by_hours.round(0)}.join("','") %>
-              </p>
+                Hyr per timme: <%= supplier.prices.map {|p| p.call_center.to_f * @salary_divided_by_hours.to_f}.join("','") %>
+               kr</p>
           <%end%>
 
           <% elsif @assitance == "teknologi/ingenjörer" %>
             <%= div_for supplier, :class => "suppliers_price" do %>
               <p>
-                Hyr per timme:<%= supplier.prices.map {|p| p.technology.to_f * @salary_divided_by_hours.round(0)}.join("','") %>
-              </p>
+                Hyr per timme: <%= supplier.prices.map {|p| p.technology.to_f * @salary_divided_by_hours.to_f}.join("','") %>
+               kr</p>
           <%end%>
 
           <% elsif @assitance == "lager/logistik" %>
             <%= div_for supplier, :class => "suppliers_price" do %>
               <p>
-                Hyr per timme: <%= supplier.prices.map {|p| p.logisticts.to_f * @salary_divided_by_hours.round(0)}.join("','") %>
-              </p>
+                Hyr per timme: <%= supplier.prices.map {|p| p.logisticts.to_f * @salary_divided_by_hours.to_f}.join("','") %>
+               kr</p>
           <%end%>
     <%end%>
 
@@ -179,7 +182,7 @@ Launch demo modal
 <div class="modal-dialog" role="document">
 <div class="modal-content">
 <div class="modal-header">
-<h5 class="modal-title" id="exampleModalLabel">Order Bekräftelse
+<h5 class="modal-title" id="exampleModalLabel">Behov du vill diskutera med leverantör
 </h5>
 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 <span aria-hidden="true">&times;</span>
@@ -189,7 +192,7 @@ Launch demo modal
 <p id="spec_rekbem">Vänligen välj om du vill rekrytera eller hyra in personal</p>
 <div class="modal-footer">
 
-<select class="rent_or_recruit" name="rent_or_recruit">
+<select required class="rent_or_recruit" name="rent_or_recruit">
 <option class="rent_or_recruit" value="Rent">Hyr per timme</option>
 <option class="rent_or_recruit" value="Recruit">Rekrytera</option>
 </select>
