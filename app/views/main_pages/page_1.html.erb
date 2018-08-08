@@ -31,11 +31,9 @@
 
 
 
+<div class="flex-container">
+  <div class="first">
 
-
-<div class="container">
-  <div class="row bootstrap_grid">
-    <div class="col-sm first">
       <%= form_tag '/page1', method: :get , :id => 'main_form' do %>
       <p class="headers_form">Arbetsområde:</p>
       <select class="productarea" name="assitance" id="productarea" onchange="myFunction(event)">
@@ -83,15 +81,16 @@
 
         <button class="submit_prod_area, btn btn-primary btn-lg" id="show">Sök Byråer
         </button>
-    </div>
 
-
-    <div class="col-sm second">
+</div>
       <!-- Get right supplier deepending in city and product area -->
+
+<div class="second">
 <% if @suppliers.present? %>
   <div class="wrapper">
     <% @suppliers.each do |supplier| %>
       <div class='supplier_div'>
+          <div class="supplier_image"><%=image_tag supplier.image.url(:thumb)%></div>
         <%= div_for supplier, :class => "suppliers_name" do %>
           <p><%= supplier.company %></p>
         <%end%>
@@ -158,19 +157,19 @@
             <p hidden="hidden"><%= supplier.id.to_i%></p>
           <%end%>
             <%= submit_tag 'Träffa Leverantör', class: 'välj_leverator'%>
-      </div>
-<%end%>
-
-  </div>
 
 
 
 <%end%>
+</div>
+
+
+
+</div>
 
 <%end%>
-</div>
-</div>
-</div>
+
+<%end%>
 
 
 <!-- Button trigger modal -->
@@ -208,20 +207,6 @@ Launch demo modal
 
 </div>
 
-<div class="footer_index">
-<p class="footer_index_text">
-Digirek AB
-<br>
-org.nr: 556976-8269
-<br>
-Gumshornsgatan 7, 114 60 Göteborg
-</p>
-
-<a href="#" class="fa fa-facebook"></a>
-<a href="#" class="fa fa-linkedin"></a>
-<a href="#" class="fa fa-instagram"></a>
-<a href="#" class="fa fa-youtube"></a>
-</div>
 
 
 
@@ -237,3 +222,19 @@ Gumshornsgatan 7, 114 60 Göteborg
   <p class='message2'></p>
 	<input type='button' class='confirmButton2' value='Ok'>
 </div>
+
+
+<!-- <div class="footer_index">
+<p class="footer_index_text">
+Digirek AB
+<br>
+org.nr: 556976-8269
+<br>
+Gumshornsgatan 7, 114 60 Göteborg
+</p>
+
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-youtube"></a>
+</div> -->

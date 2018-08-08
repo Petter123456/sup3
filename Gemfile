@@ -31,6 +31,9 @@ gem 'uglifier', '>= 1.3.0'
 
 gem "animate-rails"
 
+gem "paperclip", "~> 6.0.0"
+
+
 
 
 # Use CoffeeScript for .coffee assets and views

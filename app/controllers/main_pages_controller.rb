@@ -90,7 +90,8 @@ class MainPagesController < ApplicationController
         :supplier_price,
         :supplier_name,
         :type_of_service,
-        :telephone_number
+        :telephone_number,
+        :image
       )
     end
 
