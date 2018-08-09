@@ -10,48 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180731094752) do
+ActiveRecord::Schema.define(version: 20180809122324) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "clients", force: :cascade do |t|
-    t.string "company"
-    t.string "company_number"
-    t.string "company_representative"
-    t.string "email"
-    t.string "telephone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "contracts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "position"
     t.integer "user_id"
     t.integer "supplier_id"
     t.integer "order_spec_id"
-    t.string "productarea"
+    t.string "product_area"
     t.string "start_date"
     t.string "end_date"
     t.string "city"
     t.string "percentage"
-    t.string "experience"
+    t.string "experiance"
     t.string "salary"
     t.string "supplier"
     t.string "supplier_price"
     t.string "supplier_name"
     t.string "type_of_service"
-  end
-
-  create_table "order_specs", force: :cascade do |t|
-    t.string "position"
-    t.date "start_date"
-    t.date "end_date"
-    t.decimal "position_percentage"
-    t.string "level_of_experiance"
-    t.integer "salary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -60,7 +39,7 @@ ActiveRecord::Schema.define(version: 20180731094752) do
     t.string "it"
     t.string "finance"
     t.string "call_center"
-    t.string "logisticts"
+    t.string "logistics"
     t.string "marketing"
     t.string "technology"
     t.datetime "created_at", null: false
@@ -76,11 +55,11 @@ ActiveRecord::Schema.define(version: 20180731094752) do
     t.string "second_representative"
     t.string "email"
     t.string "telephone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "city"
     t.string "recruitment_percentage"
     t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "image_file_name"
     t.string "image_content_type"
     t.integer "image_file_size"
@@ -91,13 +70,13 @@ ActiveRecord::Schema.define(version: 20180731094752) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "datetime"
     t.string "company"
     t.string "company_number"
     t.string "telephone_number"
-    t.string "password_reset_token"
-    t.datetime "password_reset_sent_at"
+    t.datetime "password_reset_token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "prices", "suppliers"

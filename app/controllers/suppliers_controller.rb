@@ -1,4 +1,5 @@
 class SuppliersController < ApplicationController
+
   def index
     @suppliers = Supplier.all
   end
@@ -26,6 +27,11 @@ class SuppliersController < ApplicationController
   end
 
   def delete
+    @supplier.destroy
+    respond_to do |format|
+      format.html { redirect_to suppliers_url, notice: 'Supplier was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   def update

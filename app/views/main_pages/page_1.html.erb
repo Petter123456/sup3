@@ -90,9 +90,8 @@
   <div class="wrapper">
     <% @suppliers.each do |supplier| %>
       <div class='supplier_div'>
-          <div class="supplier_image"><%=image_tag supplier.image.url(:thumb)%></div>
         <%= div_for supplier, :class => "suppliers_name" do %>
-          <p><%= supplier.company %></p>
+          <p><%= supplier.company %></p><%=image_tag supplier.image.url(:thumb)%>
         <%end%>
 
         <%= div_for supplier, :class => "suppliers_description" do %>

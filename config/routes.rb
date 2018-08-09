@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :password_resets
 
   resources :suppliers
+  resources :prices
 
 default_url_options :host => "localhost:3000"
 
